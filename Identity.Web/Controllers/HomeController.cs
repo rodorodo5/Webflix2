@@ -8,6 +8,7 @@ namespace Identity.Web.Controllers
 {
     public class HomeController : BaseController
     {
+        [Authorize]
         public ActionResult Index()
         {
             return View();

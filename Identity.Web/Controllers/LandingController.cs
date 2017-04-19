@@ -6,16 +6,12 @@ using System.Web.Mvc;
 
 namespace Identity.Web.Controllers
 {
-    public class MoviesController : Controller
+    public class LandingController : Controller
     {
-        // GET: Movies
-        [Authorize]
-        public ActionResult Movies()
+       [AllowAnonymous]
+        public ActionResult Landing()
         {
-            ViewBag.Message = "Your Movie page.";
-
             return View();
         }
-
     }
 }
