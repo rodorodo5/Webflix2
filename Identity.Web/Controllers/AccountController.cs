@@ -61,7 +61,7 @@ namespace Identity.Web.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
-
+       
         //
         // POST: /Account/Login
         [HttpPost]
@@ -74,8 +74,6 @@ namespace Identity.Web.Controllers
                 return View(model);
             }
 
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
@@ -91,6 +89,7 @@ namespace Identity.Web.Controllers
                     return View(model);
             }
         }
+      
 
         //
         // GET: /Account/VerifyCode
@@ -357,7 +356,7 @@ namespace Identity.Web.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index", "Manage");
+                return RedirectToAction("Movies", "Manage");
             }
 
             if (ModelState.IsValid)
@@ -393,7 +392,7 @@ namespace Identity.Web.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Landing", "Landing");
         }
 
         //
