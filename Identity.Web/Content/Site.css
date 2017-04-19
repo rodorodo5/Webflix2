@@ -53,3 +53,7 @@ a:hover
      text-decoration:none; 
      cursor:pointer;  
 }
+.img-bg{
+    
+   background-image: url(Netflix2.jpg);
+}
