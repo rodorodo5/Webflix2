@@ -198,39 +198,7 @@
     <Content Include="Views\User\RegSucces.cshtml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD:Identity.Web/WebFlix.web.csproj
-    <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\LandingController.cs" />
-    <Compile Include="Controllers\_BaseController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Actor.cs" />
-    <Compile Include="Models\Country.cs" />
-    <Compile Include="Models\Director.cs" />
-    <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Movie.cs" />
-    <Compile Include="Models\Poster.cs" />
-    <Compile Include="Models\Review.cs" />
-    <Compile Include="Models\Trailer.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
-=======
     <Folder Include="App_Data\" />
->>>>>>> 5ea2ab8cdc366c4f5f95588a98b4388bb1082401:flix/flix.csproj
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -254,7 +222,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54174</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
