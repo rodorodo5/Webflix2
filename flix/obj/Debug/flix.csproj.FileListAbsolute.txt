@@ -58,3 +58,6 @@ c:\users\rodolfo\documents\visual studio 2015\Projects\flix\flix\bin\es\System.W
 c:\users\rodolfo\documents\visual studio 2015\Projects\flix\flix\bin\es\System.Web.WebPages.Razor.resources.dll
 c:\users\rodolfo\documents\visual studio 2015\Projects\flix\flix\obj\Debug\flix.dll
 c:\users\rodolfo\documents\visual studio 2015\Projects\flix\flix\obj\Debug\flix.pdb
+C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
+C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.dll
+C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.pdb

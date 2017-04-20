@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace Identity.Web.Models
+namespace flix.Models
 {
     public class Movie
     {

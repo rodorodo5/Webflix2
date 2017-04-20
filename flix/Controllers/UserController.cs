@@ -1,4 +1,4 @@
-﻿using flix.Models;
+﻿using flix.Models
 using System;
 using System.Collections.Generic;
 using System.Linq;
