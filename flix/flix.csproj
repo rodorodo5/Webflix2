@@ -148,12 +148,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GraficasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LandingController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Actor.cs" />
+    <Compile Include="Models\Categorias.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Director.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -204,6 +207,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\User\UserRegister.cshtml" />
     <Content Include="Views\User\RegSucces.cshtml" />
+    <Content Include="Views\Graficas\Graficas.cshtml" />
+    <Content Include="Views\Landing\Landing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

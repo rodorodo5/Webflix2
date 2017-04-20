@@ -18,9 +18,9 @@ namespace flix.Controllers
         public ActionResult UserRegister(FormCollection formCollection)
         {
             User userObj = new User();
-            userObj.UserName = formCollection["Username"];
+            userObj.Username = formCollection["Username"];
             userObj.Password = formCollection["Password"];
-            userObj.insert(userObj);
+            //userObj.insert(userObj);
             return View("RegSucces", userObj);
 
         }
