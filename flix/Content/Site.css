@@ -22,3 +22,38 @@ select,
 textarea {
     max-width: 280px;
 }
+.titles{
+    color:white;
+    font-size: 50px;
+}
+.log1{
+     
+         height: 76px;
+    background-color: transparent;
+    margin-top: -10px;
+    margin-right: 10px;
+}
+.botonmain{
+    background-color:#b9090b;
+    border-radius:5px;
+    color:white !important;
+    font-size:22px;
+    
+    text-decoration:none;
+    border-color:#b9090b;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:black; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+.img-bg{
+    
+   background-image: url(Netflix2.jpg);
+}
