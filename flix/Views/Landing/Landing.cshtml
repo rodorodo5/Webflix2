@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Landing";
+}
+
+<body class="img-bg">
+
+
+
+    <div class="jumbotron" style="background-color:transparent;">
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <br />
+            <br />
+            <br />
+            <p>
+                <button class="botonmain">
+                    @Html.ActionLink("SignUp for free", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+                </button>
+            </p>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+
+        <div class="col-md-8">
+            <h2 class="titles">ENCUENTRA LOS MEJORES REVIEWS DE LAS MEJORES PELICULAS!</h2>
+
+        </div>
+    </div>
+
+
+</body>

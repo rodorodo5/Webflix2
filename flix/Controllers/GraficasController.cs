@@ -4,15 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace flix.Controllers
 {
-    public class LandingController : Controller
+    public class GraficasController : Controller
     {
-        // GET: Landing
-        [AllowAnonymous]
-        public ActionResult Landing()
+        // GET: Graficas
+        public ActionResult Graficas()
         {
             return View();
         }
+        
     }
 }
