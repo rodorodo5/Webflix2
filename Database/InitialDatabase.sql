@@ -97,13 +97,13 @@ CREATE TABLE Trailer (
 -- Table: User
 CREATE TABLE "User" (
     Id bigint  NOT NULL IDENTITY,
-    name varchar(max)  NULL,
-    last_name varchar(max)  NULL,
-    username varchar(50)  NULL,
-    email varchar(50)  NULL,
-    password varchar(max)  NULL,
+    name varchar(max)  NOT NULL,
+    last_name varchar(max)  NOT NULL,
+    username varchar(max)  NOT NULL,
+    email varchar(max)  NOT NULL,
+    password varchar(max) NOT NULL,
     image varchar(max)  NOT NULL,
-    age smallint  NULL,
+    age smallint  NOT NULL,
     User_Genre_Id int  NOT NULL,
     CONSTRAINT User_pk PRIMARY KEY  (Id)
 );
