@@ -5,10 +5,8 @@ using System.Web;
 
 namespace flix.Models
 {
-    public class Genre
+    public class ConnectionDb
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
-     
+
     }
 }

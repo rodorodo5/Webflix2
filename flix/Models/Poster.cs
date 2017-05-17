@@ -8,7 +8,7 @@ namespace flix.Models
     public class Poster
     {
         public long Id { get; set; }
-        public string path_image { get; set; }
+        public string PathImage { get; set; }
         public Movie Movie { get; set; }
     }
 }

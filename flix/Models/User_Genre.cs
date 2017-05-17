@@ -5,9 +5,9 @@ using System.Web;
 
 namespace flix.Models
 {
-    public class Categorias
+    public class UserGenre
     {
-        public string categoria { get; set; }
+        public long Id { get; set; }
+        public string Name { get; set; }
     }
-
 }
