@@ -64,25 +64,14 @@
                     <div class="panel-body">
 
                         <div style="height:350px; width:100%;">
-                            <section class="center slider" style="width:88%;">
-                                <div>
-                                    <a><img class="hvr-shrink" style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
+                            <section class="center slider" style="width: 88%;">
+                                @foreach (var poster in Model.LPoster)
+                                {
+                                    <div>
+                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src=@poster.PathImage/></a>
+                                    </div>
+                                }
+                               
                             </section>
 
                         </div>

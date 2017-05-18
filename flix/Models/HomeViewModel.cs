@@ -11,5 +11,9 @@ namespace flix.Models
         public Genre Genre { get; set; }
         public IEnumerable<Actor> LActors { get; set; }
         public Actor Actor { get; set; }
+        public Poster Poster { get; set; }
+        public IEnumerable<Poster> LPoster { get; set; }
+
+
     }
 }

@@ -149,3 +149,4 @@ C:\Users\isaac\Desktop\Webflix2\flix\bin\System.Web.WebPages.Deployment.xml
 C:\Users\isaac\Desktop\Webflix2\flix\bin\System.Web.WebPages.Razor.xml
 C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.dll
 C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.pdb
+C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
