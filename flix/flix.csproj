@@ -147,9 +147,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\GraficasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LandingController.cs" />
+    <Compile Include="Controllers\PerfilController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -161,6 +162,7 @@
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\perfil.cs" />
     <Compile Include="Models\Poster.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\Trailer.cs" />
@@ -173,10 +175,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\memes2.png" />
+    <Content Include="Content\single.js" />
+    <Content Include="Content\slider.css" />
+    <Content Include="Content\starw.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+<<<<<<< HEAD
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -195,7 +202,93 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+=======
+    <Content Include="Resources\Libraries\fontawesome\css\font-awesome.min.css" />
+    <Content Include="Resources\Libraries\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resources\Libraries\fontawesome\Version 4.6.0.txt" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\AUTHORS.txt" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\external\jquery\jquery.js" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\images\ui-icons_444444_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\images\ui-icons_555555_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\images\ui-icons_777620_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\images\ui-icons_777777_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\index.html" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\AUTHORS.txt" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\external\jquery\jquery.js" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\images\ui-icons_444444_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\images\ui-icons_555555_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\images\ui-icons_777620_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\images\ui-icons_777777_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\index.html" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\jquery-ui.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\jquery-ui.js" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\jquery-ui.min.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\jquery-ui.min.js" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\jquery-ui.structure.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\jquery-ui.structure.min.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\jquery-ui.theme.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\jquery-ui.theme.min.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\LICENSE.txt" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui.js" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui.min.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui.min.js" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui.structure.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui.structure.min.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui.theme.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui.theme.min.css" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\LICENSE.txt" />
+    <Content Include="Resources\Libraries\jquery\jquery-3.1.0.min.js" />
+    <Content Include="Resources\Libraries\slick-1.6.0\.gitignore" />
+    <Content Include="Resources\Libraries\slick-1.6.0\index.html" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\ajax-loader.gif" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\fonts\slick.svg" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\slick-theme.css" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\slick.css" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\slick.js" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\slick.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Libraries\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Resources\Libraries\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Resources\Libraries\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Resources\Libraries\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Resources\Libraries\fontawesome\fonts\FontAwesome.otf" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\jquery-ui-1.12.1\package.json" />
+    <Content Include="Resources\Libraries\jquery-ui-1.12.1\package.json" />
+    <Content Include="Resources\Libraries\slick-1.6.0\bower.json" />
+    <Content Include="Resources\Libraries\slick-1.6.0\component.json" />
+    <Content Include="Resources\Libraries\slick-1.6.0\CONTRIBUTING.markdown" />
+    <Content Include="Resources\Libraries\slick-1.6.0\ISSUE_TEMPLATE.md" />
+    <Content Include="Resources\Libraries\slick-1.6.0\LICENSE" />
+    <Content Include="Resources\Libraries\slick-1.6.0\Makefile" />
+    <Content Include="Resources\Libraries\slick-1.6.0\package.json" />
+    <Content Include="Resources\Libraries\slick-1.6.0\README.markdown" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick.jquery.json" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\config.rb" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\fonts\slick.eot" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\fonts\slick.ttf" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\fonts\slick.woff" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\slick-theme.less" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\slick-theme.scss" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\slick.less" />
+    <Content Include="Resources\Libraries\slick-1.6.0\slick\slick.scss" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+>>>>>>> Cambios de vistas |Index| Reviews | Perfil
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Content\jquery.bxslider.css" />
+    <Content Include="Scripts\jquery.bxslider.js" />
+    <Content Include="Content\jquery.bxslider.min.css" />
+    <Content Include="Scripts\jquery.bxslider.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -205,6 +298,8 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\single.js" />
+    <Content Include="Scripts\slider.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -222,12 +317,19 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\User\UserRegister.cshtml" />
     <Content Include="Views\User\RegSucces.cshtml" />
-    <Content Include="Views\Graficas\Graficas.cshtml" />
     <Content Include="Views\Landing\Landing.cshtml" />
+    <Content Include="Views\Perfil\perfil.cshtml" />
+    <Content Include="Views\User\publicar.cshtml" />
+    <Content Include="Views\Review\review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+<<<<<<< HEAD
     <Folder Include="Views\Index\" />
+=======
+    <Folder Include="Resources\Libraries\NewFolder1\" />
+    <Folder Include="Resources\Library\" />
+>>>>>>> Cambios de vistas |Index| Reviews | Perfil
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

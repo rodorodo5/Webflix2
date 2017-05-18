@@ -57,3 +57,39 @@ a:hover
     
    background-image: url(Netflix2.jpg);
 }
+.fondotemp{
+    background-image: url(starw.jpg);
+    width:250px;
+    height:300px;
+}
+
+.hvr-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.parallax { 
+    /* The image used */
+    background-image: url(memes2.png);
+
+    /* Set a specific height */
+    height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+}
+.bodybg{
+      background-image: url(memes2.png);
+}

@@ -4589,11 +4589,22 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
+<<<<<<< HEAD
   background-color: #222;
   border-color: #080808;
+=======
+      background-color: #b73333;
+    
+    border-style: solid;
+    border-color: white;
+>>>>>>> Cambios de vistas |Index| Reviews | Perfil
 }
 .navbar-inverse .navbar-brand {
+<<<<<<< HEAD
   color: #9d9d9d;
+=======
+  color: #ffffff;
+>>>>>>> Cambios de vistas |Index| Reviews | Perfil
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
@@ -4601,10 +4612,18 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
+<<<<<<< HEAD
   color: #9d9d9d;
+=======
+  color: #ffffff;
+>>>>>>> Cambios de vistas |Index| Reviews | Perfil
 }
 .navbar-inverse .navbar-nav > li > a {
+<<<<<<< HEAD
   color: #9d9d9d;
+=======
+  color: #ffffff;
+>>>>>>> Cambios de vistas |Index| Reviews | Perfil
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
@@ -5451,9 +5470,15 @@ button.list-group-item-danger.active:focus {
   margin-bottom: 20px;
   background-color: #fff;
   border: 1px solid transparent;
+<<<<<<< HEAD
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+=======
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+>>>>>>> Cambios de vistas |Index| Reviews | Perfil
 }
 .panel-body {
   padding: 15px;
