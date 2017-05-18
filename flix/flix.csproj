@@ -160,7 +160,7 @@
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Director.cs" />
     <Compile Include="Models\Genre.cs" />
-    <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\IndexViewModel.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\perfil.cs" />
     <Compile Include="Models\Poster.cs" />
@@ -183,6 +183,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -201,6 +202,7 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+
     <Content Include="Resources\Libraries\fontawesome\css\font-awesome.min.css" />
     <Content Include="Resources\Libraries\fontawesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Resources\Libraries\fontawesome\Version 4.6.0.txt" />
@@ -321,9 +323,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Index\" />
+
     <Folder Include="Resources\Libraries\NewFolder1\" />
     <Folder Include="Resources\Library\" />
-    <Folder Include="Views\Index\" />
+
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

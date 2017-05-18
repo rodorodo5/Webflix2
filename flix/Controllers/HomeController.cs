@@ -11,12 +11,8 @@ namespace flix.Controllers
     {
         public ActionResult Index()
         {
-            var viewModel = new HomeViewModel()
+            var viewModel = new IndexViewModel()
             {
-                Poster = new Poster(),
-                LPoster = ConnectionDb.GetPosters(),
-                Actor = new Actor(),
-                LActors = ConnectionDb.GetActors(),
                 Genre = new Genre(),
                 LGenres = ConnectionDb.GetGenres()
             };
