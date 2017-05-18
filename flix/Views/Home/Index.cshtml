@@ -1,4 +1,4 @@
-﻿@model flix.Models.IndexViewModel
+﻿@model flix.Models.HomeViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -8,9 +8,6 @@
 
 
 <body class="parallax">
-
-    
-
     <div class="parallax">
         <div>
             <h1 style="color:white;text-align:center;padding-top:120px;">LOS MEJORES REVIEWS ONLINE</h1>
@@ -43,7 +40,7 @@
         </div>
         <div class="col-sm-4" style="margin-top:30px;">
 
-            @*@Html.DropDownListFor(c => c.categoria, list, "Selecciona Autor", new { @class = "form-control" })*@
+            @Html.DropDownListFor(c => c.Actor.Name, new SelectList(Model.LActors,"Id","Name"), "Selecciona Actor", new { @class = "form-control" })
         </div>
     </div>
 

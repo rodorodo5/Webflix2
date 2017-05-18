@@ -61,7 +61,6 @@ c:\users\rodolfo\documents\visual studio 2015\Projects\flix\flix\obj\Debug\flix.
 C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
 C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.dll
 C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.pdb
-C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
 C:\Users\isaac\Desktop\Webflix2\flix\bin\ApplicationInsights.config
 C:\Users\isaac\Desktop\Webflix2\flix\bin\roslyn\csc.exe
 C:\Users\isaac\Desktop\Webflix2\flix\bin\roslyn\csc.exe.config

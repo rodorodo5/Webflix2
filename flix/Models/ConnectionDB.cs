@@ -51,5 +51,25 @@ namespace flix.Models
             }
             return genre;
         }
+
+        public static List<Actor> GetActors()
+        {
+
+            List<Actor> actors = new List<Actor>();
+            SqlConnection connection = new SqlConnection(StrConnection);
+            string cmd = "SELECT * from Actor";
+            SqlCommand sqlCmd = new SqlCommand(cmd, connection);
+            connection.Open();
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Actor a = new Actor();
+                a.Id = long.Parse(dr["Id"].ToString());
+                a.Name = dr["Name"].ToString();
+                a.PathImage = dr["Path_Image"].ToString();
+                actors.Add(a);
+            }
+            return actors;
+        }
     }
 }
