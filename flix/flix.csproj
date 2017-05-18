@@ -183,7 +183,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-<<<<<<< HEAD
+
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -202,7 +202,7 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-=======
+
     <Content Include="Resources\Libraries\fontawesome\css\font-awesome.min.css" />
     <Content Include="Resources\Libraries\fontawesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Resources\Libraries\fontawesome\Version 4.6.0.txt" />
@@ -283,7 +283,6 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
->>>>>>> Cambios de vistas |Index| Reviews | Perfil
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Content\jquery.bxslider.css" />
     <Content Include="Scripts\jquery.bxslider.js" />
@@ -324,12 +323,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-<<<<<<< HEAD
     <Folder Include="Views\Index\" />
-=======
+
     <Folder Include="Resources\Libraries\NewFolder1\" />
     <Folder Include="Resources\Library\" />
->>>>>>> Cambios de vistas |Index| Reviews | Perfil
+
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
