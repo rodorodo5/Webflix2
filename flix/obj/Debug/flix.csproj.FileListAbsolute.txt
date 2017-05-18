@@ -61,7 +61,6 @@ c:\users\rodolfo\documents\visual studio 2015\Projects\flix\flix\obj\Debug\flix.
 C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
 C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.dll
 C:\Users\Brandon\Documents\Webflix\flix\obj\Debug\flix.pdb
-C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
 C:\Users\isaac\Desktop\Webflix2\flix\bin\ApplicationInsights.config
 C:\Users\isaac\Desktop\Webflix2\flix\bin\roslyn\csc.exe
 C:\Users\isaac\Desktop\Webflix2\flix\bin\roslyn\csc.exe.config
@@ -150,6 +149,7 @@ C:\Users\isaac\Desktop\Webflix2\flix\bin\System.Web.WebPages.Deployment.xml
 C:\Users\isaac\Desktop\Webflix2\flix\bin\System.Web.WebPages.Razor.xml
 C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.dll
 C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.pdb
+<<<<<<< HEAD
 C:\Users\Rodolfo\Documents\gitt\flix\bin\ApplicationInsights.config
 C:\Users\Rodolfo\Documents\gitt\flix\bin\roslyn\csc.exe
 C:\Users\Rodolfo\Documents\gitt\flix\bin\roslyn\csc.exe.config
@@ -246,3 +246,6 @@ C:\Users\Rodolfo\Documents\gitt\flix\bin\es\System.Web.WebPages.Razor.resources.
 C:\Users\Rodolfo\Documents\gitt\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
 C:\Users\Rodolfo\Documents\gitt\flix\obj\Debug\flix.dll
 C:\Users\Rodolfo\Documents\gitt\flix\obj\Debug\flix.pdb
+=======
+C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
+>>>>>>> 22f7ad70c7deb0b0b80a3e5b757a84d13b2c29f4
