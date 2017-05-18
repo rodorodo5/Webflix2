@@ -19,15 +19,32 @@
     </div>
 
 
-    <div class="row" style="margin-top: 0px;  height:100px; background-color:#b73333;   padding-left: 15px;margin-right: auto;margin-left: auto;">
+    <div class="row" style="margin-top: 0px;  height:100px; background-color:#b73333;    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;">
+
         <div class="col-sm-4" style="margin-top:30px;">
-            @Html.DropDownListFor(c => c.Genre.Name,new SelectList(Model.LGenres,"Id","Name") , "Selecciona", new { @class = "form-control" })
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search!</button>
+                </span>
+                @Html.TextBox("SearchString", null, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="col-sm-4" style="margin-top:30px;">
+
+
+            @Html.DropDownListFor(c => c.Genre.Name,new SelectList(Model.LGenres,"Id","Name") , "Selecciona", new { @class = "form-control" });
+
+       
+
         </div>
         <div class="col-sm-4" style="margin-top:30px;">
 
             @*@Html.DropDownListFor(c => c.categoria, list, "Selecciona Autor", new { @class = "form-control" })*@
         </div>
-
     </div>
 
 
