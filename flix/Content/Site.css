@@ -91,7 +91,22 @@ a:hover
     width:100%;
 }
 .bodybg{
-      background-image: url(memes2.png);
+     background-image: url(memes2.png);
 }
 
 
+.sidepanels{
+    margin-top:15px;
+    color:black;
+    background-color:white;
+    border-radius:15px;
+    margin-left:10px;
+
+}
+
+.moviedes{
+    color:white !important;
+    font-size:17px;
+    font-weight: bold;
+
+}
