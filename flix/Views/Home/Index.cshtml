@@ -7,7 +7,7 @@
 
 
 
-<body class="parallax">
+<body class="" style="background-color:#2e313f;">
     <div class="parallax">
         <div>
             <h1 style="color:white;text-align:center;padding-top:120px;">LOS MEJORES REVIEWS ONLINE</h1>
@@ -16,9 +16,7 @@
     </div>
 
 
-    <div class="row" style="margin-top: 0px;  height:100px; background-color:#b73333;    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
+    <div class="row" style="margin-top: 0px;  height:100px; background-color:#b73333;padding-right: 15px;padding-left: 15px;margin-right: auto;
     margin-left: auto;">
 
         <div class="col-sm-4" style="margin-top:30px;">
@@ -33,7 +31,7 @@
         <div class="col-sm-4" style="margin-top:30px;">
 
 
-            @Html.DropDownListFor(c => c.Genre.Name,new SelectList(Model.LGenres,"Id","Name") , "Selecciona", new { @class = "form-control" });
+            @Html.DropDownListFor(c => c.Genre.Name,new SelectList(Model.LGenres,"Id","Name") , "Selecciona", new { @class = "form-control" })
 
        
 
@@ -48,19 +46,19 @@
 
 
     
-    <div class="body-content" style="background-color:white;padding-top: 20px;margin-left: 20px;margin-right: 20px;">
+    <div class="body-content" style="background-color:#2e313f;padding-top: 20px;margin-left: 20px;margin-right: 20px;">
+
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="panel panel-default" style="background-color:#b73333;">
+                    <div class="panel-body">
+                        <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Reviews más recientes</h2>
+                    </div>
+                </div>
 
 
 
-        <div class="panel panel-default" style="background-color:#b73333;">
-            <div class="panel-body">
-                <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Reviews más recientes</h2>
-            </div>
-        </div>
-
-       
-              
-                <div class="panel panel-default" style="background-color:white; box-shadow: 7px 7px 5px #888888;">
+                <div class="panel panel-default" style="background-color:white;">
                     <div class="panel-body">
 
                         <div style="height:350px; width:100%;">
@@ -68,10 +66,10 @@
                                 @foreach (var poster in Model.LPoster)
                                 {
                                     <div>
-                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src=@poster.PathImage/></a>
+                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src=@poster.PathImage /></a>
                                     </div>
                                 }
-                               
+
                             </section>
 
                         </div>
@@ -81,44 +79,108 @@
 
 
 
-        
-
-        <div class="panel panel-default" style="background-color:#b73333;">
-            <div class="panel-body">
-                <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Más populares</h2>
-            </div>
-        </div>
 
 
-
-        <div class="panel panel-default" style="background-color:white; box-shadow: 7px 7px 5px #888888;">
-            <div class="panel-body">
-
-                <div style="height:350px; width:100%;">
-                    <section class="center slider" style="width:88%;">
-                        <div>
-                            <a><img class="hvr-shrink" style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                        </div>
-                        <div>
-                            <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                        </div>
-                        <div>
-                            <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                        </div>
-                        <div>
-                            <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                        </div>
-                        <div>
-                            <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                        </div>
-                        <div>
-                            <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                        </div>
-                    </section>
-
+                <div class="panel panel-default" style="background-color:#b73333;">
+                    <div class="panel-body">
+                        <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Más populares</h2>
+                    </div>
                 </div>
 
+
+
+                <div class="panel panel-default" style="background-color:white;">
+                    <div class="panel-body">
+
+                        <div style="height:350px; width:100%;">
+                            <section class="center slider" style="width:88%;">
+                                <div>
+                                    <a><img class="hvr-shrink" style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
+                                </div>
+                                <div>
+                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
+                                </div>
+                                <div>
+                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
+                                </div>
+                                <div>
+                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
+                                </div>
+                                <div>
+                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
+                                </div>
+                                <div>
+                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
+                                </div>
+                            </section>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
+
+
+            <div class="col-sm-3" style="height:1000px;">
+
+                <div class="panel panel-default" style="background-color:#b73333;margin-top: 9px;margin-bottom: 39px;">
+                    <div class="panel-body">
+                        <h2 style="color:white;font-size:20px;text-align:center;" class="titles">Peliculas con mas reviews</h2>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default" style="background-color:#b73333;">
+                    <div class="panel-body">
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+
+                       
+                    </div>
+                </div>
+                <div class="panel panel-default" style="background-color:#b73333;margin-top: 37px;margin-bottom: 39px;">
+                    <div class="panel-body">
+                        <h2 style="color:white;font-size:20px;text-align:center;" class="titles">Peliculas con mas reviews</h2>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default" style="background-color:#b73333;">
+                    <div class="panel-body">
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+
+
+                    </div>
+                </div>
+            </div>
+
+       
+
+       </div>
     </div>
+
+
+
+
 </body>
