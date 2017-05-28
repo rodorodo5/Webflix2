@@ -1,0 +1,20 @@
+﻿@model flix.User
+
+@{
+    ViewBag.Title = "UserDashBoard";
+}
+
+
+<fieldset>
+  
+
+    @if (Session["username"] != null)
+    {
+        <text>
+            Welcome @Session["username"].ToString()
+        </text>
+
+    }
+</fieldset>
+
+

@@ -249,3 +249,13 @@ C:\Users\Rodolfo\Documents\gitt\flix\obj\Debug\flix.pdb
 =======
 C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
 >>>>>>> 22f7ad70c7deb0b0b80a3e5b757a84d13b2c29f4
+C:\Users\Rodolfo\Documents\gitt\flix\bin\EntityFramework.dll
+C:\Users\Rodolfo\Documents\gitt\flix\bin\EntityFramework.SqlServer.dll
+C:\Users\Rodolfo\Documents\gitt\flix\bin\EntityFramework.xml
+C:\Users\Rodolfo\Documents\gitt\flix\bin\EntityFramework.SqlServer.xml
+C:\Users\Rodolfo\Documents\gitt\flix\bin\System.Net.Http.Formatting.dll
+C:\Users\Rodolfo\Documents\gitt\flix\bin\System.Web.Http.dll
+C:\Users\Rodolfo\Documents\gitt\flix\bin\System.Web.Http.WebHost.dll
+C:\Users\Rodolfo\Documents\gitt\flix\bin\System.Net.Http.Formatting.xml
+C:\Users\Rodolfo\Documents\gitt\flix\bin\System.Web.Http.xml
+C:\Users\Rodolfo\Documents\gitt\flix\bin\System.Web.Http.WebHost.xml
