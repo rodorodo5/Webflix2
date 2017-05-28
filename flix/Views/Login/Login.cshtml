@@ -1,0 +1,115 @@
+﻿@model flix.User
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<body class="body-content" style="background-color:#2e313f;">
+
+
+
+
+
+
+
+
+    <div class="body-content" style="padding-top: 20px;margin-left: 20px;margin-right: 20px;">
+
+        <div class="panel panel-default" style="background-color:#b73333;">
+            <div class="panel-body">
+                <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Login</h2>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-9">
+
+                <div class="panel panel-default" style="background-color:white;">
+                    <div class="panel-body">
+
+                        <div class="container" style="margin-left:100px;">
+                            <div class="row"> 
+                                <div class="col-md-4" style="background-color:#b73333;border-radius:15px; height:268px;">
+                                    
+
+                                </div>
+
+
+                                <div class="col-md-7">
+                                    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                                    {
+                                        <fieldset>
+
+
+                                            @Html.AntiForgeryToken()
+                                            @Html.ValidationSummary(true)
+                                            @if (@ViewBag.Message != null)
+                                            {
+                                                <div style="border: 1px solid red">
+                                                    @ViewBag.Message
+                                                </div>
+                                            }
+                                            <table>
+                                                <tr>
+                                                    @Html.LabelFor(a => a.username)
+                                                    <td>@Html.TextBoxFor(a => a.username, new { @class = "form-control" })</td>
+                                                    <td>@Html.ValidationMessageFor(a => a.username)</td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>
+                                                        @Html.LabelFor(a => a.password)
+                                                        @Html.PasswordFor(a => a.password, new { @class = "form-control" })
+
+                                                    </td>
+                                                    <td>
+                                                        @Html.ValidationMessageFor(a => a.password)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="submit" value="Login" class="btn btn-default" />
+                                                    </td>
+
+
+
+
+                                                </tr>
+                                            </table>
+                                        </fieldset>
+                                    }
+
+
+                                </div>
+                               
+                              
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+            <div class="col-md-3" style="height:300px; background-color:#b73333;border-radius:15px;">
+                <div class="panel panel-default" style="margin-top:30px;text-align:center; font-size:17px;">
+                    <div class="panel-body">Registrate</div>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+   

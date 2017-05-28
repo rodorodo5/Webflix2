@@ -93,7 +93,27 @@
                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    @*<li>@Html.ActionLink("Register", "UserRegister", "User")</li>*@
+                  
+                    <li>
+                        @if (Session["username"] != null)
+                        {
+
+                              <li style="font-weight:bold;">@Html.ActionLink( "Hi "+ @Session["username"].ToString(), "perfil", "Perfil")</li>
+                            <li style="font-weight:bold;">@Html.ActionLink("Logout", "logout", "Login")</li>
+                            
+                        }
+                        @if (Session["username"] == null)
+                        {
+
+                              <li>@Html.ActionLink("Login", "Login", "Login")</li>
+                            <li>@Html.ActionLink("Register", "Register", "Login")</li>
+                        }
+                    </li>
+
+
+
+
+
                 </ul>
             </div>
         </div>
