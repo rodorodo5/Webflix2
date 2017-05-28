@@ -63,10 +63,17 @@
 
                         <div style="height:350px; width:100%;">
                             <section class="center slider" style="width: 88%;">
-                                @foreach (var poster in Model.LPoster)
+                                @*Aqui va el poster de reviews recientes*@
+                                @foreach (var poster in Model.LGetLastReviews)
                                 {
                                     <div>
-                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src=@poster.PathImage /></a>
+                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src=@poster.Path/></a>
+                                        <label>@poster.Id</label>
+                                        <label>@poster.Title</label>
+                                        <label>@poster.Date</label>
+                                       
+                                        
+
                                     </div>
                                 }
 
@@ -94,24 +101,14 @@
 
                         <div style="height:350px; width:100%;">
                             <section class="center slider" style="width:88%;">
-                                <div>
-                                    <a><img class="hvr-shrink" style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
-                                <div>
-                                    <a><img style="width:200px;height:300px;" src="~/Content/starw.jpg" /></a>
-                                </div>
+                               @foreach (var popular in Model.LMostPopularMovies)
+                               {
+                                   <div>
+                                       <a><img class="hvr-shrink" style="width:200px;height:300px;" src="@popular.Path" /></a>
+                                       <label>@popular.Title</label>
+                                       <label>@popular.Rank</label>
+                                   </div>
+                               }
                             </section>
 
                         </div>
@@ -132,20 +129,12 @@
 
                 <div class="panel panel-default" style="background-color:#b73333;">
                     <div class="panel-body">
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                      
+                        @foreach (var movie in Model.LMovie)
+                        {
+                            <div class="sidepanels"><p style="margin-left:15px;">@movie.Title</p></div>
+                        }
 
-                       
                     </div>
                 </div>
                 <div class="panel panel-default" style="background-color:#b73333;margin-top: 37px;margin-bottom: 39px;">

@@ -13,8 +13,10 @@ namespace flix.Controllers
         {
             var viewModel = new HomeViewModel()
             {
-                Poster = new Poster(),
-                LPoster = ConnectionDb.GetPosters(),
+                Movie = new Movie(),
+                LMovie = ConnectionDb.GetTopMovieReview(10),
+                LGetLastReviews = ConnectionDb.GetLastReviews(10),
+                LMostPopularMovies = ConnectionDb.GetRankMovie(10),
                 Actor = new Actor(),
                 LActors = ConnectionDb.GetActors(),
                 Genre = new Genre(),

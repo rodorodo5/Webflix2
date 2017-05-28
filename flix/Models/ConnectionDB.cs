@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
@@ -11,26 +13,30 @@ namespace flix.Models
     {
         private static readonly string StrConnection = ConfigurationManager.ConnectionStrings["DBConnection"]
             .ConnectionString;
+       static  Stopwatch watch = new Stopwatch();
 
-        public static List<Review> GetTop50Review()
+        public static List<Movie> GetTopMovieReview(int top)
         {
-            List<Review> Review = new List<Review>();
+           
+            List<Movie> movie = new List<Movie>();
+            watch.Start();
             SqlConnection connection = new SqlConnection(StrConnection);
-            string cmd = "SELECT TOP(50) from Review";
+            string cmd = "GetTopMovies";
             SqlCommand sqlCmd = new SqlCommand(cmd, connection);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.Add("@Top", SqlDbType.VarChar).Value = top.ToString();
             connection.Open();
             SqlDataReader dr = sqlCmd.ExecuteReader();
             while (dr.Read())
             {
-                Review r = new Review();
+                Movie r = new Movie();
                 r.Id = long.Parse(dr["Id"].ToString());
-                r.Movie.Title = dr["Movie"].ToString();
-                r.Comment = dr["Comment"].ToString();
-                r.User.Username = dr["user"].ToString();
-
-                Review.Add(r);
+                r.Title = dr["title"].ToString();
+                movie.Add(r);
             }
-            return Review;
+            connection.Close();
+            watch.Stop();
+            return movie;
 
         }
 
@@ -49,6 +55,7 @@ namespace flix.Models
                 g.Name = dr["Name"].ToString();
                 genre.Add(g);
             }
+            connection.Close();
             return genre;
         }
 
@@ -72,22 +79,53 @@ namespace flix.Models
             return actors;
         }
 
-        public static List<Poster> GetPosters()
+        public static List<GetLastReviews> GetLastReviews(int top)
         {
-            List<Poster> posters= new List<Poster>();
+            List<GetLastReviews> lastReviewses= new List<GetLastReviews>();
             SqlConnection connection = new SqlConnection(StrConnection);
-            string cmd = "SELECT Top 5 * from Poster";
+            string cmd = "GetLastReviews";
             SqlCommand sqlCmd = new SqlCommand(cmd, connection);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.Add("@Top", SqlDbType.VarChar).Value = top.ToString();
             connection.Open();
             SqlDataReader dr = sqlCmd.ExecuteReader();
             while (dr.Read())
             {
-                Poster p = new Poster();
-                p.Id = long.Parse(dr["Id"].ToString());
-                p.PathImage = dr["Path_Image"].ToString();
-                posters.Add(p);
+                GetLastReviews getLasR = new GetLastReviews();
+                getLasR.Id = long.Parse(dr["Id"].ToString());
+                getLasR.Title = dr["Title"].ToString();
+                getLasR.Path = dr["Path_Image"].ToString();
+                getLasR.Comment = dr["Comment"].ToString();
+                getLasR.Date = DateTime.Parse(dr["Date"].ToString());
+                lastReviewses.Add(getLasR);
             }
-            return posters;
+            connection.Close();
+            return lastReviewses;
+
+        }
+
+        public static List<MostPopularMovie> GetRankMovie(int top)
+        {
+            List<MostPopularMovie> getRankMovie = new List<MostPopularMovie>();
+            SqlConnection connection = new SqlConnection(StrConnection);
+            string cmd = "GetRankMovie";
+            SqlCommand sqlCmd = new SqlCommand(cmd, connection);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.Add("@Top", SqlDbType.VarChar).Value = top.ToString();
+            connection.Open();
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                MostPopularMovie gtMostPopularMovie = new MostPopularMovie();
+                gtMostPopularMovie.Id = long.Parse(dr["Id"].ToString());
+                gtMostPopularMovie.Title = dr["Title"].ToString();
+                gtMostPopularMovie.Path = dr["Path_Image"].ToString();
+                gtMostPopularMovie.Rank = char.Parse(dr["Calificacion"].ToString());
+
+                getRankMovie.Add(gtMostPopularMovie);
+            }
+            connection.Close();
+            return getRankMovie;
 
         }
     }
