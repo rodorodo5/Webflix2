@@ -170,6 +170,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LandingController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -219,6 +220,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dj.png" />
+    <Content Include="Content\film-reel.png" />
+    <Content Include="Content\header-background.jpg" />
     <Content Include="Content\image.jpg" />
     <Content Include="Content\Images\Users\User_%281%29.jpg" />
     <Content Include="Content\Images\Users\User_%2810%29.jpg" />
@@ -270,7 +274,6 @@
     <Content Include="Content\Images\Users\User_%288%29.jpg" />
     <Content Include="Content\Images\Users\User_%289%29.jpg" />
     <Content Include="Content\memes2.png" />
-    <Content Include="Content\single.js" />
     <Content Include="Content\slider.css" />
     <Content Include="Content\starw.jpg" />
     <Content Include="favicon.ico" />
@@ -532,12 +535,12 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\logout.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Admin\Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Resources\Libraries\NewFolder1\" />
     <Folder Include="Resources\Library\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

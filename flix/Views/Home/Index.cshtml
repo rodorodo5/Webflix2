@@ -57,16 +57,26 @@
                 <div class="panel panel-default" style="background-color:white;">
                     <div class="panel-body">
 
-                        <div style="height:350px; width:100%;">
+                        <div style="height:400px; width:100%;">
                             <section class="center slider" style="width: 88%;">
                                 @*Aqui va el poster de reviews recientes*@
                                 @foreach (var poster in Model.LGetLastReviews)
                                 {
                                     <div>
+<<<<<<< HEAD
                                         <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@poster.Path )"/></a>
                                         <label>@poster.Id</label>
                                         <label>@poster.Title</label>
                                         <label>@poster.Date</label>
+=======
+                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src=@poster.Path/></a>
+                                        <div style="background-color:#b73333;">
+                                            <label>@poster.Id</label>
+                                            <label>@poster.Title</label>
+                                            <label>@poster.Date</label>
+                                        </div>
+                                 
+>>>>>>> vistas para CRUD
                                        
                                         
 
@@ -95,17 +105,23 @@
                 <div class="panel panel-default" style="background-color:white;">
                     <div class="panel-body">
 
-                        <div style="height:350px; width:100%;">
+                        <div style="height:400px; width:100%;">
                             <section class="center slider" style="width:88%;">
                                @foreach (var popular in Model.LMostPopularMovies)
                                {
                                    <div>
+<<<<<<< HEAD
                                        <a>
                                          
                                            <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@popular.Path )" alt="Image" >
                                        </a>
                                        <label>@popular.Title</label>
                                        <label>@popular.Rank</label>
+=======
+                                       <a><img class="hvr-shrink" style="width:200px;height:300px;" src="@popular.Path" /></a>
+                                       <label class="center">@popular.Title</label>
+                                       <label class="center">@popular.Rank</label>
+>>>>>>> vistas para CRUD
                                    </div>
                                }
                             </section>

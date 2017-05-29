@@ -1,0 +1,115 @@
+﻿
+
+@{
+    ViewBag.Title = "Admin";
+
+}
+
+
+
+<body class="" style="background-color:#2e313f;">
+    <div class="parallax2">
+        <div>
+            <h1 style="color:white;text-align:center;padding-top:120px;">ADMIN PANEL</h1>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="body-content" style="background-color:#2e313f;padding-top: 20px;margin-left: 20px;margin-right: 20px;">
+       
+
+
+        <div class="panel panel-default" style="background-color:white;">
+            <div class="panel-body">
+
+                <div style="height:400px; width:100%;">
+
+                    <div class="community-images center-block">
+
+                        <div class="colas hvr-shrink" id="peli">
+                            AGREGAR PELICULA
+                            <img class="imgc"  src="~/Content/film-reel.png"  />
+                        </div>
+
+                        <div class="colas hvr-shrink" id="actor" >
+                            AGREGAR ACTOR
+                            <img class="imgc" src="~/Content/dj.png" />
+                        </div>
+
+                        <div class="colas hvr-shrink" id="genero">
+                            AGREGAR GENERO
+                            <img class="imgc" src="~/Content/film-reel.png" />
+                        </div>
+
+                    </div>
+
+                   <div id="1" style="background-color:#b73333;height:300px;">
+                    <p  class="base">PANEL 1</p>
+                   </div>
+                    <div id="2" style="background-color:#b73333;height:300px;">
+                        <p  class="base">PANEL 2</p>
+                    </div>
+                    <div id="3" style="background-color:#b73333;height:300px;">
+                        <p class="base">PANEL 3</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+    <script type="text/javascript">
+        $('#1').fadeOut();
+        $('#2').fadeOut();
+        $('#3').fadeOut();
+    $(document).on('click', function(e) {
+
+
+        if ($(e.target).closest('#peli').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $("#1").fadeIn();
+
+        } else if ($(e.target).closest('#actor').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $("#2").fadeIn();
+
+        } else if ($(e.target).closest('#genero').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $("#3").fadeIn();
+
+        }
+        else if (!$(e.target).closest('#1').length) {
+            $('#1').hide();
+            $('#2').hide();
+            $('#3').hide();
+            $("#peli").fadeIn();
+            $("#actor").fadeIn();
+            $("#genero").fadeIn();
+        }
+    });
+    </script>
+
+
+
+</body>

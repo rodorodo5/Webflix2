@@ -90,6 +90,18 @@ a:hover
     background-size: cover;
     width:100%;
 }
+.parallax2 { 
+    /* The image used */
+    background-image: url(header-background.jpg);
+
+    /* Set a specific height */
+    height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+}
 .bodybg{
      background-image: url(memes2.png);
 }
@@ -273,4 +285,32 @@ form {
 }
 .search_bar ::placeholder {
   font-weight: 400;
+}
+.community-images {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.colas {
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+    border-radius:15px;
+  color:white;
+  background-color:#b73333;
+  width: 400px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  min-height: 300px;
+  box-shadow: 10px 10px 5px #888888;
+}
+.imgc{
+        width: 200px;
+    margin-top: 20px;
+}
+
+.base{
+    font-weight:bold; font-size:20px;text-align:center;color:white;
 }
