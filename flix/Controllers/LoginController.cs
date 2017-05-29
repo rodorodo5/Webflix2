@@ -56,5 +56,11 @@ namespace flix.Controllers
             Session.RemoveAll();
             return RedirectToAction("Index", "Home");
         }
+
+
+        public ActionResult Register()
+        {
+            return View();
+        }
     }
 }
