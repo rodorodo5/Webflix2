@@ -15,6 +15,7 @@ namespace flix.Controllers
             {
                 Movie = new Movie(),
                 LMovie = ConnectionDb.GetTopMovieReview(10),
+                LGetTopUserReviewerses = ConnectionDb.GetTopUserReviewerses(10),
                 LGetLastReviews = ConnectionDb.GetLastReviews(10),
                 LMostPopularMovies = ConnectionDb.GetRankMovie(10),
                 Actor = new Actor(),

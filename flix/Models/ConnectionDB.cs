@@ -128,5 +128,29 @@ namespace flix.Models
             return getRankMovie;
 
         }
+
+        public static List<GetTopUserReviewers> GetTopUserReviewerses(int top)
+        {
+            List<GetTopUserReviewers> getTopUserReviewersesMovie = new List<GetTopUserReviewers>();
+            SqlConnection connection = new SqlConnection(StrConnection);
+            string cmd = "GetTopUserReviewer";
+            SqlCommand sqlCmd = new SqlCommand(cmd, connection);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.Add("@Top", SqlDbType.VarChar).Value = top.ToString();
+            connection.Open();
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                GetTopUserReviewers gtMostPopularMovie = new GetTopUserReviewers();
+                gtMostPopularMovie.Id = long.Parse(dr["Id"].ToString());
+                gtMostPopularMovie.Username = dr["Username"].ToString();
+                gtMostPopularMovie.Reviews = int.Parse(dr["Reviews"].ToString());
+                
+                getTopUserReviewersesMovie.Add(gtMostPopularMovie);
+            }
+            connection.Close();
+            return getTopUserReviewersesMovie;
+
+        }
     }
 }

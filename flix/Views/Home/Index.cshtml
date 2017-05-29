@@ -1,4 +1,5 @@
-﻿@model flix.Models.HomeViewModel
+﻿@using System.Drawing
+@model flix.Models.HomeViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -67,7 +68,7 @@
                                 @foreach (var poster in Model.LGetLastReviews)
                                 {
                                     <div>
-                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src=@poster.Path/></a>
+                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@poster.Path )"/></a>
                                         <label>@poster.Id</label>
                                         <label>@poster.Title</label>
                                         <label>@poster.Date</label>
@@ -104,7 +105,10 @@
                                @foreach (var popular in Model.LMostPopularMovies)
                                {
                                    <div>
-                                       <a><img class="hvr-shrink" style="width:200px;height:300px;" src="@popular.Path" /></a>
+                                       <a>
+                                         
+                                           <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@popular.Path )" alt="Image" >
+                                       </a>
                                        <label>@popular.Title</label>
                                        <label>@popular.Rank</label>
                                    </div>
@@ -146,20 +150,14 @@
 
                 <div class="panel panel-default" style="background-color:#b73333;">
                     <div class="panel-body">
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
-                        <div class="sidepanels"><p style="margin-left:15px;">HOLA</p></div>
+                        @foreach (var user in Model.LGetTopUserReviewerses)
+                        {
 
-
+                            @*<div class="sidepanels"><p style="margin-left:15px;">@user.Id</p></div>*@
+                            <div class="sidepanels"><p style="margin-left:15px;">@user.Username</p></div>
+                            @*<div class="sidepanels"><p style="margin-left:15px;">@user.Reviews</p></div>*@
+                          
+                        }
                     </div>
                 </div>
             </div>
