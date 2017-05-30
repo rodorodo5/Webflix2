@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="row" style="margin-top: 0px;  height:100px; background-color:#b73333;padding-right: 15px;padding-left: 15px;margin-right: auto;
+    <div class="row" style="margin-top: 0px;  height:100px; background-color:#8b3337;padding-right: 15px;padding-left: 15px;margin-right: auto;
     margin-left: auto;">
 
         <form class="search_bar larger">
@@ -46,7 +46,7 @@
 
         <div class="row">
             <div class="col-sm-9">
-                <div class="panel panel-default" style="background-color:#b73333;">
+                <div class="panel panel-default" style="background-color:#8b3337;">
                     <div class="panel-body">
                         <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Reviews más recientes</h2>
                     </div>
@@ -63,20 +63,17 @@
                                 @foreach (var poster in Model.LGetLastReviews)
                                 {
                                     <div>
-<<<<<<< HEAD
-                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@poster.Path )"/></a>
-                                        <label>@poster.Id</label>
-                                        <label>@poster.Title</label>
-                                        <label>@poster.Date</label>
-=======
-                                        <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src=@poster.Path/></a>
-                                        <div style="background-color:#b73333;">
-                                            <label>@poster.Id</label>
-                                            <label>@poster.Title</label>
-                                            <label>@poster.Date</label>
+
+                                        <a href="/Review/Review/?=@"><img class="sizecool hvr-shrink" src="@Href("~/Content/"+@poster.Path )"/></a>
+                                        <div class="subtitulo">
+                                            @poster.Id
+                                            @poster.Title
                                         </div>
+
+                                     
+                                    
                                  
->>>>>>> vistas para CRUD
+
                                        
                                         
 
@@ -94,7 +91,7 @@
 
 
 
-                <div class="panel panel-default" style="background-color:#b73333;">
+                <div class="panel panel-default" style="background-color:#8b3337;">
                     <div class="panel-body">
                         <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Más populares</h2>
                     </div>
@@ -107,23 +104,24 @@
 
                         <div style="height:400px; width:100%;">
                             <section class="center slider" style="width:88%;">
+                                
                                @foreach (var popular in Model.LMostPopularMovies)
                                {
+                                  
                                    <div>
-<<<<<<< HEAD
                                        <a>
-                                         
                                            <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@popular.Path )" alt="Image" >
                                        </a>
-                                       <label>@popular.Title</label>
-                                       <label>@popular.Rank</label>
-=======
-                                       <a><img class="hvr-shrink" style="width:200px;height:300px;" src="@popular.Path" /></a>
-                                       <label class="center">@popular.Title</label>
-                                       <label class="center">@popular.Rank</label>
->>>>>>> vistas para CRUD
-                                   </div>
+
+                                        <div class="subtitulo"  >
+                                                 @popular.Title
+                                                 @popular.Rank
+
+                                      
+                                        </div>
+                                 </div>
                                }
+                                    
                             </section>
 
                         </div>
@@ -135,14 +133,14 @@
 
             <div class="col-sm-3" style="height:1000px;">
 
-                <div class="panel panel-default" style="background-color:#b73333;margin-top: 9px;margin-bottom: 39px;">
+                <div class="panel panel-default" style="background-color:#8b3337;margin-top: 9px;margin-bottom: 39px;">
                     <div class="panel-body">
                         <h2 style="color:white;font-size:20px;text-align:center;" class="titles">Peliculas con mas reviews</h2>
                     </div>
                 </div>
 
 
-                <div class="panel panel-default" style="background-color:#b73333;">
+                <div class="panel panel-default" style="background-color:#8b3337;">
                     <div class="panel-body">
                       
                         @foreach (var movie in Model.LMovie)
@@ -152,14 +150,14 @@
 
                     </div>
                 </div>
-                <div class="panel panel-default" style="background-color:#b73333;margin-top: 37px;margin-bottom: 39px;">
+                <div class="panel panel-default" style="background-color:#8b3337;margin-top: 37px;margin-bottom: 39px;">
                     <div class="panel-body">
                         <h2 style="color:white;font-size:20px;text-align:center;" class="titles">Peliculas con mas reviews</h2>
                     </div>
                 </div>
 
 
-                <div class="panel panel-default" style="background-color:#b73333;">
+                <div class="panel panel-default" style="background-color:#8b3337;">
                     <div class="panel-body">
                         @foreach (var user in Model.LGetTopUserReviewerses)
                         {
