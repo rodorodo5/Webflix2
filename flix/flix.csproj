@@ -214,7 +214,11 @@
     <Compile Include="Models\PosterDBHelper.cs" />
     <Compile Include="Models\Poster.cs" />
     <Compile Include="Models\Review.cs" />
+<<<<<<< HEAD
     <Compile Include="Models\ReviewDBHelper.cs" />
+=======
+    <Compile Include="Models\ReviewList.cs" />
+>>>>>>> 089a5a0f55e7398322e4a85094c7b1c497043715
     <Compile Include="Models\Trailer.cs" />
     <Compile Include="Models\TrailerDBHelper.cs" />
     <Compile Include="Models\User.cs" />
@@ -227,10 +231,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\billboard.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\director-chair.png" />
     <Content Include="Content\dj.png" />
     <Content Include="Content\film-reel.png" />
     <Content Include="Content\header-background.jpg" />
@@ -284,7 +290,8 @@
     <Content Include="Content\Images\Users\User_%287%29.jpg" />
     <Content Include="Content\Images\Users\User_%288%29.jpg" />
     <Content Include="Content\Images\Users\User_%289%29.jpg" />
-    <Content Include="Content\memes2.png" />
+    <Content Include="Content\man.png" />
+    <Content Include="Content\memes2.jpg" />
     <Content Include="Content\slider.css" />
     <Content Include="Content\starw.jpg" />
     <Content Include="favicon.ico" />

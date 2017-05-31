@@ -80,7 +80,7 @@ a:hover
 }
 .parallax { 
     /* The image used */
-    background-image: url(memes2.png);
+    background-image: url(memes2.jpg);
 
     /* Set a specific height */
     height: 300px; 
@@ -162,7 +162,7 @@ form {
   outline: none;
 }
 .search_bar button[type=submit] {
-  background: linear-gradient(#b73333, #b73333);
+  background: linear-gradient(#8b3337, #8b3337);
   color: rgba(255, 255, 255, 0);
       border: 1px solid rgba(255, 255, 255, 0.54);
   width: 10%;
@@ -186,7 +186,7 @@ form {
   background-size: contain;
 }
 .search_bar button[type=submit]:hover, .search_bar button[type=submit]:focus {
-  background: linear-gradient(#b73333, #b73333);
+  background: linear-gradient(#2e313f, #2e313f);
  box-shadow: 0 0 3px rgba(255, 255, 255,1)
    
   cursor: pointer;
@@ -194,7 +194,7 @@ form {
 .search_bar .search_dropdown {
     font-weight: 600;
     min-width: 17px;
-    background: linear-gradient(#2e313f, #2e313f);
+    background: linear-gradient(#8b3337, #8b3337);
     border-right: 1px solid #ddd;
     color: #fff;
     padding: 0 28px 0 13px;
@@ -219,7 +219,7 @@ form {
   margin-top: -6px;
 }
 .search_bar .search_dropdown:hover, .search_bar .search_dropdown.active {
- background: linear-gradient(#b73333, #b73333);
+ background: linear-gradient(#8b3337, #8b3337);
     color: white;
     cursor: pointer;
     border-right-color: #ccc;
@@ -298,7 +298,7 @@ form {
     font-size:20px;
     border-radius:15px;
   color:white;
-  background-color:#b73333;
+  background-color:#8b3337;
   width: 400px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -312,5 +312,30 @@ form {
 }
 
 .base{
-    font-weight:bold; font-size:20px;text-align:center;color:white;
+    font-weight:bold; font-size:20px;text-align:center;color:white;margin-top: -100px;
+}
+
+.base2{
+    background-color:#8b3337;height:700px;border-radius:15px;
+}
+
+.subtitulo{
+    margin-top: 10px;
+    background-color: rgb(139, 51, 55);
+    border-radius: 8px;
+    padding: 7px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 0px;
+    width: 198px;
+    height: 50px;
+}
+
+.sizecool{
+    width: 200px; height: 300px;
+}
+
+.imagencard{
+    width: 200px; height: 300px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
