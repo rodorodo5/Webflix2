@@ -207,6 +207,7 @@
     <Compile Include="Models\perfil.cs" />
     <Compile Include="Models\Poster.cs" />
     <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\ReviewList.cs" />
     <Compile Include="Models\Trailer.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\User_Genre.cs" />

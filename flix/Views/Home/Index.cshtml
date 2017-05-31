@@ -63,20 +63,13 @@
                                 @foreach (var poster in Model.LGetLastReviews)
                                 {
                                     <div>
-
-                                        <a href="/Review/Review/?=@"><img class="sizecool hvr-shrink" src="@Href("~/Content/"+@poster.Path )"/></a>
+                                        <a href="/Review/Review/?=@poster.Id" id="tag<%=count++%" name="@poster.Id">
+                                            <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@poster.Path )" alt="Image">
+                                        </a>
                                         <div class="subtitulo">
-                                            @poster.Id
                                             @poster.Title
-                                        </div>
-
-                                     
-                                    
-                                 
-
-                                       
-                                        
-
+                                            @poster.Date
+                                        </div> 
                                     </div>
                                 }
 

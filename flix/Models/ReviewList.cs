@@ -5,14 +5,15 @@ using System.Web;
 
 namespace flix.Models
 {
-    public class GetLastReviews
+    public class ReviewList
     {
-        public long Id  { get; set; }
+        public long Id { get; set; }
         public long User_Id { get; set; }
-        public string Title { get; set; }
-        public string Path { get; set; }
+        public string name { get; set; }
         public string Comment { get; set; }
         public DateTime Date { get; set; }
- 
+
+
+
     }
 }

@@ -18,8 +18,9 @@ namespace flix.Models
         public int Length { get; set; }
         public string Sinopsis { get; set; }
         public string Description { get; set; }
+        public string user { get; set; }
 
-     
+
         //public ICollection<long> Actors { get; set; }
         //public ICollection<long> Genres { get; set; }
 
