@@ -96,3 +96,10 @@ C:\Users\isaac\Desktop\Webflix2\flix\bin\System.Web.WebPages.Razor.xml
 C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.csprojResolveAssemblyReference.cache
 C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.dll
 C:\Users\isaac\Desktop\Webflix2\flix\obj\Debug\flix.pdb
+C:\Users\isaac\Desktop\Webflix2\flix\bin\MongoDB.Bson.dll
+C:\Users\isaac\Desktop\Webflix2\flix\bin\MongoDB.Driver.Core.dll
+C:\Users\isaac\Desktop\Webflix2\flix\bin\MongoDB.Driver.dll
+C:\Users\isaac\Desktop\Webflix2\flix\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\isaac\Desktop\Webflix2\flix\bin\MongoDB.Bson.xml
+C:\Users\isaac\Desktop\Webflix2\flix\bin\MongoDB.Driver.xml
+C:\Users\isaac\Desktop\Webflix2\flix\bin\MongoDB.Driver.Core.xml

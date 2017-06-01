@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -13,13 +15,12 @@ namespace flix.Models
     {
         private static readonly string StrConnection = ConfigurationManager.ConnectionStrings["DBConnection"]
             .ConnectionString;
-       static  Stopwatch watch = new Stopwatch();
+     
 
         public static List<Movie> GetTopMovieReview(int top)
         {
            
             List<Movie> movie = new List<Movie>();
-            watch.Start();
             SqlConnection connection = new SqlConnection(StrConnection);
             string cmd = "GetTopMovies";
             SqlCommand sqlCmd = new SqlCommand(cmd, connection);
@@ -35,7 +36,6 @@ namespace flix.Models
                 movie.Add(r);
             }
             connection.Close();
-            watch.Stop();
             return movie;
 
         }
@@ -94,7 +94,7 @@ namespace flix.Models
                 GetLastReviews getLasR = new GetLastReviews();
                 getLasR.Id = long.Parse(dr["Id"].ToString());
                 getLasR.Title = dr["Title"].ToString();
-                getLasR.Path = dr["Path_Image"].ToString();
+                getLasR.Path= dr["Path_Image"].ToString();
                 getLasR.Comment = dr["Comment"].ToString();
                 getLasR.Date = DateTime.Parse(dr["Date"].ToString());
                 lastReviewses.Add(getLasR);
@@ -114,6 +114,7 @@ namespace flix.Models
             sqlCmd.Parameters.Add("@Top", SqlDbType.VarChar).Value = top.ToString();
             connection.Open();
             SqlDataReader dr = sqlCmd.ExecuteReader();
+          
             while (dr.Read())
             {
                 MostPopularMovie gtMostPopularMovie = new MostPopularMovie();
@@ -121,7 +122,6 @@ namespace flix.Models
                 gtMostPopularMovie.Title = dr["Title"].ToString();
                 gtMostPopularMovie.Path = dr["Path_Image"].ToString();
                 gtMostPopularMovie.Rank = char.Parse(dr["Calificacion"].ToString());
-
                 getRankMovie.Add(gtMostPopularMovie);
             }
             connection.Close();

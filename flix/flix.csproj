@@ -89,6 +89,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MongoDB.Bson, Version=2.4.3.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.4.3\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.2.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.4.2\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.3.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.4.3\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -98,6 +110,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
@@ -220,92 +236,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\image.jpg" />
-    <Content Include="Content\Images\Users\User_%281%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2810%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2811%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2812%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2813%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2814%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2815%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2816%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2817%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2818%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2819%29.jpg" />
-    <Content Include="Content\Images\Users\User_%282%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2820%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2821%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2822%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2823%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2824%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2825%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2826%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2827%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2828%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2829%29.jpg" />
-    <Content Include="Content\Images\Users\User_%283%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2830%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2831%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2832%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2833%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2834%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2835%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2836%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2837%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2838%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2839%29.jpg" />
-    <Content Include="Content\Images\Users\User_%284%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2840%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2841%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2842%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2843%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2844%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2845%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2846%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2847%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2848%29.jpg" />
-    <Content Include="Content\Images\Users\User_%2849%29.jpg" />
-    <Content Include="Content\Images\Users\User_%285%29.jpg" />
-    <Content Include="Content\Images\Users\User_%286%29.jpg" />
-    <Content Include="Content\Images\Users\User_%287%29.jpg" />
-    <Content Include="Content\Images\Users\User_%288%29.jpg" />
-    <Content Include="Content\Images\Users\User_%289%29.jpg" />
-    <Content Include="Content\memes2.png" />
-    <Content Include="Content\single.js" />
-    <Content Include="Content\slider.css" />
-    <Content Include="Content\starw.jpg" />
-    <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <EntityDeploy Include="Login.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Login.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Login.edmx.diagram">
-      <DependentUpon>Login.edmx</DependentUpon>
-    </Content>
-    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
-    <Content Include="Login.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Login.edmx</DependentUpon>
-      <LastGenOutput>Login.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Login.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Login.edmx</DependentUpon>
-      <LastGenOutput>Login.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\Images\Actors\Actor_%281%29.jpg" />
     <Content Include="Content\Images\Actors\Actor_%2810%29.jpg" />
     <Content Include="Content\Images\Actors\Actor_%2811%29.jpg" />
@@ -406,6 +336,92 @@
     <Content Include="Content\Images\Movies\Movie_%287%29.jpg" />
     <Content Include="Content\Images\Movies\Movie_%288%29.jpg" />
     <Content Include="Content\Images\Movies\Movie_%289%29.jpg" />
+    <Content Include="Content\Images\Users\User_%281%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2810%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2811%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2812%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2813%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2814%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2815%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2816%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2817%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2818%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2819%29.jpg" />
+    <Content Include="Content\Images\Users\User_%282%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2820%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2821%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2822%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2823%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2824%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2825%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2826%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2827%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2828%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2829%29.jpg" />
+    <Content Include="Content\Images\Users\User_%283%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2830%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2831%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2832%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2833%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2834%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2835%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2836%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2837%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2838%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2839%29.jpg" />
+    <Content Include="Content\Images\Users\User_%284%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2840%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2841%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2842%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2843%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2844%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2845%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2846%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2847%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2848%29.jpg" />
+    <Content Include="Content\Images\Users\User_%2849%29.jpg" />
+    <Content Include="Content\Images\Users\User_%285%29.jpg" />
+    <Content Include="Content\Images\Users\User_%286%29.jpg" />
+    <Content Include="Content\Images\Users\User_%287%29.jpg" />
+    <Content Include="Content\Images\Users\User_%288%29.jpg" />
+    <Content Include="Content\Images\Users\User_%289%29.jpg" />
+    <Content Include="Content\memes2.png" />
+    <Content Include="Content\single.js" />
+    <Content Include="Content\slider.css" />
+    <Content Include="Content\starw.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="Login.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Login.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Login.edmx.diagram">
+      <DependentUpon>Login.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Login.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Login.edmx</DependentUpon>
+      <LastGenOutput>Login.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Login.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Login.edmx</DependentUpon>
+      <LastGenOutput>Login.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -509,7 +525,9 @@
     <Content Include="Scripts\single.js" />
     <Content Include="Scripts\slider.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

@@ -1,4 +1,5 @@
 ﻿@using System.Drawing
+@using System.Web.UI.WebControls
 @model flix.Models.HomeViewModel
 
 @{
@@ -31,19 +32,12 @@
                     
                 </ul>
             </div>
-
             <input type="text" placeholder="Search for anything" />
 
             <button type="submit" value="Search">Search</button>
         </form>
     </div>
-
-
-
-
-    
     <div class="body-content" style="background-color:#2e313f;padding-top: 20px;margin-left: 20px;margin-right: 20px;">
-
         <div class="row">
             <div class="col-sm-9">
                 <div class="panel panel-default" style="background-color:#b73333;">
@@ -51,38 +45,25 @@
                         <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Reviews más recientes</h2>
                     </div>
                 </div>
-
-
-
                 <div class="panel panel-default" style="background-color:white;">
                     <div class="panel-body">
-
                         <div style="height:350px; width:100%;">
                             <section class="center slider" style="width: 88%;">
                                 @*Aqui va el poster de reviews recientes*@
                                 @foreach (var poster in Model.LGetLastReviews)
                                 {
+                                   
                                     <div>
                                         <a><img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@poster.Path )"/></a>
                                         <label>@poster.Id</label>
                                         <label>@poster.Title</label>
                                         <label>@poster.Date</label>
-                                       
-                                        
-
                                     </div>
                                 }
-
                             </section>
-
                         </div>
-
                     </div>
                 </div>
-
-
-
-
 
                 <div class="panel panel-default" style="background-color:#b73333;">
                     <div class="panel-body">
@@ -102,7 +83,7 @@
                                    <div>
                                        <a>
                                          
-                                           <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@popular.Path )" alt="Image" >
+                                           <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@popular.Path )"/>
                                        </a>
                                        <label>@popular.Title</label>
                                        <label>@popular.Rank</label>

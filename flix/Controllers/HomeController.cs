@@ -13,19 +13,14 @@ namespace flix.Controllers
         {
             var viewModel = new HomeViewModel()
             {
-                Movie = new Movie(),
                 LMovie = ConnectionDb.GetTopMovieReview(10),
                 LGetTopUserReviewerses = ConnectionDb.GetTopUserReviewerses(10),
                 LGetLastReviews = ConnectionDb.GetLastReviews(10),
                 LMostPopularMovies = ConnectionDb.GetRankMovie(10),
-                Actor = new Actor(),
                 LActors = ConnectionDb.GetActors(),
-                Genre = new Genre(),
                 LGenres = ConnectionDb.GetGenres()
             };
             return View(viewModel);
         }
-
-   
     }
 }
