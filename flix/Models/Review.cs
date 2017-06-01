@@ -17,7 +17,11 @@ namespace flix.Models
         public Movie Movie { get; set; }
         public User User { get; set; }
 
+         public GetLastReviews GetLastReviews { get; set; }
+        public IEnumerable<GetLastReviews> LGetLastReviews { get; set; }
 
+        public ReviewList ReviewList { get; set; }
+        public IEnumerable<ReviewList> LReviewList { get; set; }
         //public long Id { get; set; }
         //public string Comment { get; set; }
         //public short rank { get; set; }

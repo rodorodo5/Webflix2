@@ -1,0 +1,201 @@
+﻿
+
+@{
+    ViewBag.Title = "Admin";
+
+}
+
+
+
+<body class="" style="background-color:#2e313f;">
+    <div class="parallax2">
+        <div>
+            <h1 style="color:white;text-align:center;padding-top:120px;">ADMIN PANEL</h1>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="body-content" style="background-color:#2e313f;padding-top: 20px;margin-left: 20px;margin-right: 20px;">
+       
+
+
+        <div class="panel panel-default" style="background-color:white;">
+            <div class="panel-body">
+                <div class="btn btn-default" id="boton" style="background-color:#8b3337;color:white;font-weight:bold;" >
+                     < Regresar 
+                </div>
+
+                <div style="height:800px; width:100%;">
+
+                    <div class="community-images center-block">
+
+                        <div class="colas hvr-shrink" id="peli">
+                            CRUD PELICULA
+                            <img class="imgc"  src="~/Content/film-reel.png"  />
+                        </div>
+
+                        <div class="colas hvr-shrink" id="actor" >
+                            CRUD ACTOR
+                            <img class="imgc" src="~/Content/dj.png" />
+                        </div>
+
+                        <div class="colas hvr-shrink" id="genero">
+                            CRUD GENERO
+                            <img class="imgc" src="~/Content/film-reel.png" />
+                        </div>
+
+                    </div>
+
+                    <div class="community-images center-block">
+
+                        <div class="colas hvr-shrink" id="director">
+                            CRUD  DIRECTOR
+                            <img class="imgc" src="~/Content/director-chair.png" />
+                        </div>
+
+                        <div class="colas hvr-shrink" id="poster">
+                            CRUD POSTER
+                            <img class="imgc" src="~/Content/billboard.png" />
+                        </div>
+
+                        <div class="colas hvr-shrink" id="user">
+                            CRUD USER
+                            <img class="imgc" src="~/Content/man.png" />
+                        </div>
+
+                    </div>
+
+                   <div id="1" class="base2">
+                    <p  class="base">PANEL 1</p>
+                   </div>
+                    <div id="2" class="base2">
+                        <p  class="base">PANEL 2</p>
+                    </div>
+                    <div id="3" class="base2">
+                        <p class="base">PANEL 3</p>
+                    </div>
+                    <div id="4" class="base2">
+                        <p class="base">PANEL 4</p>
+                    </div>
+                    <div id="5" class="base2">
+                        <p class="base">PANEL 5</p>
+                    </div>
+                    <div id="6" class="base2">
+                        <p class="base">PANEL 6</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+   
+
+
+
+
+
+
+
+    </div>
+    <script type="text/javascript">
+        $('#1').fadeOut();
+        $('#2').fadeOut();
+        $('#3').fadeOut();
+        $('#4').fadeOut();
+        $('#5').fadeOut();
+        $('#6').fadeOut();
+        $('#boton').fadeOut();
+    $(document).on('click', function(e) {
+
+
+        if ($(e.target).closest('#peli').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $('#director').hide();
+            $('#poster').hide();
+            $('#user').hide();
+            $("#1").fadeIn();
+            $("#boton").fadeIn();
+
+
+        } else if ($(e.target).closest('#actor').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $('#director').hide();
+            $('#poster').hide();
+            $('#user').hide();
+            $("#2").fadeIn();
+            $("#boton").fadeIn();
+
+        } else if ($(e.target).closest('#genero').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $('#director').hide();
+            $('#poster').hide();
+            $('#user').hide();
+            $("#3").fadeIn();
+            $("#boton").fadeIn();
+
+        } else if ($(e.target).closest('#director').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $('#director').hide();
+            $('#poster').hide();
+            $('#user').hide();
+            $("#4").fadeIn();
+            $("#boton").fadeIn();
+
+        } else if ($(e.target).closest('#poster').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $('#director').hide();
+            $('#poster').hide();
+            $('#user').hide();
+            $("#5").fadeIn();
+            $("#boton").fadeIn();
+
+        }
+        else if ($(e.target).closest('#user').length) {
+            $('#peli').hide();
+            $('#actor').hide();
+            $('#genero').hide();
+            $('#director').hide();
+            $('#poster').hide();
+            $('#user').hide();
+            $("#6").fadeIn();
+            $("#boton").fadeIn();
+
+        }
+        else if ($(e.target).closest('#boton').length) {
+            $('#1').hide();
+            $('#2').hide();
+            $('#3').hide();
+            $('#4').hide();
+            $('#5').hide();
+            $('#6').hide();
+            $('#boton').fadeOut();
+            $("#peli").fadeIn();
+            $("#actor").fadeIn();
+            $("#genero").fadeIn();
+            $('#director').fadeIn();
+            $('#poster').fadeIn();
+            $('#user').fadeIn();
+        }
+    });
+    </script>
+
+
+
+</body>

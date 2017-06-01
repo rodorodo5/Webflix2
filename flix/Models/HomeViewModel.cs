@@ -22,6 +22,9 @@ namespace flix.Models
         public GetLastReviews GetLastReviews { get; set; }
         public IEnumerable<GetLastReviews> LGetLastReviews { get; set; }
 
+        public ReviewList ReviewList { get; set; }
+        public IEnumerable<ReviewList> LReviewList { get; set; }
+
         public MostPopularMovie MostPopularMovie { get; set; }
         public IEnumerable<MostPopularMovie> LMostPopularMovies { get; set; }
 

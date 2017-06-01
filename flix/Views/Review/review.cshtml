@@ -1,5 +1,6 @@
 ﻿@model flix.Models.Review
 
+
 @{
     ViewBag.Title = "review";
 }
@@ -8,7 +9,7 @@
 
     <div class="body-content" style="padding-top: 20px;margin-left: 20px;margin-right: 20px;">
 
-        <div class="panel panel-default" style="background-color:#b73333;">
+        <div class="panel panel-default" style="background-color:#8b3337;">
             <div class="panel-body">
                 <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Reviews</h2>
             </div>
@@ -27,11 +28,12 @@
                                 <div class="row">
 
                                     <div style="height:400px;" class="col-md-3">
-                                        <a><img style="width: 265px;height: 391px;" src="~/Content/starw.jpg" /></a>
+                                        <a><img style="width: 265px;height: 391px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="@Href("~/Content/starw.png" )" /></a>
                                     </div>
-                                    <div style="height:400px; background-color:#b73333;border-radius:15px;" class="col-md-5">
+                                    <div style="height:400px; background-color:#8b3337;border-radius:15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                                          class="col-md-5">
                                             <div class="body-content" style="margin-top:30px;">
-                                                <p class="moviedes">NOMBRE: + Variable</p>
+                                                <h2 id="Title"></h2>
                                                 <p class="moviedes">ANIO: + Variable</p>
                                                 <p class="moviedes">AUTOR: + Variable</p>
                                                 <p class="moviedes">ACTORES: + Variable</p>
@@ -48,34 +50,98 @@
                         </div>
                     </div>
 
+                   
+
+
+                    @foreach (var popular in Model.LReviewList)
+                    {
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">@popular.name</div>
+                            <div class="panel-body">
+                                @popular.Comment
+                            </div>
+                        </div>
+                    }
+
+
+
 
 
 
                     <div class="panel panel-default">
-                      <div class="panel-heading">Nombre de User</div>
-                       <div class="panel-body">Review</div>
+                      <div class="panel-heading">Create Review</div>
+                       <div class="panel-body" style="height:300px;">
+                            @using (Html.BeginForm("Review", "Review", FormMethod.Post))
+                            {
+
+                           <div class="col-md-4">
+                               <label>Comment:</label>
+                                @Html.TextBoxFor(m => m.Comment, new { @class="form-control" })
+                               @*@Html.ValidationMessageFor(m => m.Comment)*@
+                           </div>
+                        <div class="col-md-2">
+                            <div >
+                                <label>Watched:</label>
+                                <br />
+
+                              <p>@Html.RadioButtonFor(model => model.Watched, true) Yes</p> 
+
+                             <p>@Html.RadioButtonFor(model => model.Watched, false) No</p>  
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div>
+                                <label>Wished:</label>
+                                <br />
+
+                                <p>@Html.RadioButtonFor(model => model.Wished, true) Yes</p>
+
+                                <p>@Html.RadioButtonFor(model => model.Wished, false) No</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div>
+                                <label>Rank (1-5):</label>
+                                <br />
+
+                                @Html.DropDownListFor(m => m.Rank, new List<SelectListItem>
+                                   { new SelectListItem{Text="1", Value="1"},
+                                     new SelectListItem{Text="2", Value="2"},
+                                     new SelectListItem{Text="3", Value="3"},
+                                     new SelectListItem{Text="4", Value="4"},
+                                     new SelectListItem{Text="5", Value="5"},
+                                     },
+                                     "Rank")
+                           
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div>
+                                <label>Userid:</label>
+                                <br />
+
+                                @Html.TextBoxFor(m => m.User.Id, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div>
+                                <label>movie id:</label>
+                                <br />
+                                @Html.TextBoxFor(m => m.Movie.Id, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <input type="submit" value="Submit" />
+
+                            }
+                        </div>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Nombre de User</div>
-                        <div class="panel-body">Review</div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Nombre de User</div>
-                        <div class="panel-body">Review</div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Nombre de User</div>
-                        <div class="panel-body">Review</div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">Nombre de User</div>
-                        <div class="panel-body">Review</div>
-                    </div>
+
+                    
                   
-                                
 
-
-
+            
+               
                 
 
 
@@ -83,11 +149,15 @@
 
                 </div>
 
-                <div class="col-md-3" style="height:1000px; background-color:#b73333;border-radius:15px;">
+                <div class="col-md-3" style="height:1000px; background-color:#8b3337;border-radius:15px;">
                     <div class="panel panel-default" style="margin-top:30px;text-align:center; font-size:17px;">
                         <div class="panel-body">Otras peliculas</div>
                     </div>
                 </div>
           
         </div>
+
+
+
+       
 </body>

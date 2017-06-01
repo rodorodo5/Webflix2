@@ -8,18 +8,17 @@ namespace flix.Models
     public class Movie
     {
 
-        //string strConnection = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
-
-
-
         public long Id { get; set; }
         public string Title { get; set; }
         public short Year { get; set; }
         public int Length { get; set; }
         public string Sinopsis { get; set; }
         public string Description { get; set; }
+<<<<<<< HEAD
+=======
+        public string user { get; set; }
 
-     
+
         //public ICollection<long> Actors { get; set; }
         //public ICollection<long> Genres { get; set; }
 
@@ -63,10 +62,11 @@ namespace flix.Models
         //    return movies;
         //}
 
+>>>>>>> 089a5a0f55e7398322e4a85094c7b1c497043715
         public Country Country { get; set; }
         public Director Director { get; set; }
-        public ICollection<Actor> Actors { get; set; }
-        public ICollection<Genre> Genres { get; set; }
+        public List<Actor> Actors { get; set; }
+        public List<Genre> Genres { get; set; }
 
     }
 }

@@ -104,6 +104,37 @@ namespace flix.Models
 
         }
 
+
+        public static List<ReviewList> ReviewList(int top)
+        {
+            List<ReviewList> lastReviewses = new List<ReviewList>();
+            SqlConnection connection = new SqlConnection(StrConnection);
+            string cmd = "ReviewList";
+            SqlCommand sqlCmd = new SqlCommand(cmd, connection);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.Add("@Top", SqlDbType.VarChar).Value = top.ToString();
+            connection.Open();
+            SqlDataReader dr = sqlCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                ReviewList getLasR = new ReviewList();
+                getLasR.Id = long.Parse(dr["Id"].ToString());
+                getLasR.User_Id = long.Parse(dr["User_Id"].ToString());
+                getLasR.name = dr["name"].ToString();
+                getLasR.Comment = dr["Comment"].ToString();
+                getLasR.Date = DateTime.Parse(dr["Date"].ToString());
+                lastReviewses.Add(getLasR);
+            }
+            connection.Close();
+            return lastReviewses;
+
+        }
+
+
+
+
+
+
         public static List<MostPopularMovie> GetRankMovie(int top)
         {
             List<MostPopularMovie> getRankMovie = new List<MostPopularMovie>();
