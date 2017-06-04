@@ -59,11 +59,11 @@ namespace flix.Models
             return movieGenres;
         }
 
-        public List<MovieGenre> GetByMovieId(long Id)
+        public List<Genre> GetByMovieId(long Id)
         {
-            List<MovieGenre> movieGenres = new List<MovieGenre>();
+            List<Genre> movieGenres = new List<Genre>();
 
-            SqlCommand cmd = new SqlCommand("MovieActor_GetByMovieId", connection);
+            SqlCommand cmd = new SqlCommand("MovieGenre_GetGenreByMovieId", connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Id", Id);
             SqlDataAdapter dataAdapt = new SqlDataAdapter(cmd);
@@ -75,11 +75,9 @@ namespace flix.Models
 
             foreach (DataRow dRow in dTable.Rows)
             {
-                var movieGenre = new MovieGenre
+                var movieGenre = new Genre()
                 {
-                    Id = Convert.ToInt64(dRow["Id"]),
-                    Genre_Id = long.Parse(Convert.ToString(dRow["Genre_Id"])),
-                    Movie_Id = long.Parse(Convert.ToString(dRow["Movie_Id"]))
+                   Name = Convert.ToString(dRow["Name"])
                 };
 
                 movieGenres.Add(movieGenre);

@@ -153,12 +153,12 @@ namespace flix.Models
                     Id = Convert.ToInt64(dRow["Id"]),
                     Movie_Id = long.Parse(Convert.ToString(dRow["Movie_Id"])),
                     CharacterName = Convert.ToString(dRow["CharacterName"]),
-                    CharacterDescription = Convert.ToString("CharacterDescription"),
+                    CharacterDescription = Convert.ToString(dRow["CharacterDescription"]),
                     Protagonist = bool.Parse(Convert.ToString(dRow["Protagonist"])),
                     VoiceOnly = bool.Parse(Convert.ToString(dRow["VoiceOnly"])),
                     Actor_Id = long.Parse(Convert.ToString(dRow["Actor_Id"]))
                 };
-
+              
                 movieActor.Add(actor);
             }
 

@@ -38,8 +38,9 @@ namespace flix.Models
         {
             Movie movie = new Movie();
             MovieActorDbHelper movieActorDbHelper = new MovieActorDbHelper();
-            GenreDBHelper genreDbHelper = new GenreDBHelper();
+            MovieGenreDBHelper moviegenreDbHelper = new MovieGenreDBHelper();
             PosterDBHelper posterDbHelper = new PosterDBHelper();
+
             SqlCommand cmd = new SqlCommand("Movie_GetById", connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Id", id);
@@ -75,7 +76,7 @@ namespace flix.Models
                         Name = Convert.ToString(dRow["DirectorName"])
                     },
                     MovieActors = movieActorDbHelper.GetByMovieId(id),
-                    Genres = genreDbHelper.GetById(id),
+                    Genres = moviegenreDbHelper.GetByMovieId(id),
                     Posters = posterDbHelper.GetByMovieId(id)
                 };
 
