@@ -226,6 +226,8 @@
     <Compile Include="Models\MostPopularMovie.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MovieDBHelper.cs" />
+    <Compile Include="Models\MovieGenre.cs" />
+    <Compile Include="Models\MovieGenreDBHelper.cs" />
     <Compile Include="Models\MovieList.cs" />
     <Compile Include="Models\MovieActor.cs" />
     <Compile Include="Models\MovieActorDBHelper.cs" />
