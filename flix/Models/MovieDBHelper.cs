@@ -34,10 +34,12 @@ namespace flix.Models
             return response >= 1 ? true : false;
         }
 
-        public List<Movie> GetById(long id)
+        public Movie GetById(long id)
         {
-            List<Movie> movies = new List<Movie>();
-
+            Movie movie = new Movie();
+            MovieActorDbHelper movieActorDbHelper = new MovieActorDbHelper();
+            GenreDBHelper genreDbHelper = new GenreDBHelper();
+            PosterDBHelper posterDbHelper = new PosterDBHelper();
             SqlCommand cmd = new SqlCommand("Movie_GetById", connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Id", id);
@@ -47,17 +49,20 @@ namespace flix.Models
             connection.Open();
             dataAdapt.Fill(dTable);
             connection.Close();
-
+            List<Actor> actors = new List<Actor>();
+            List<Genre> genre = new List<Genre>();
+            List<Poster> posters = new List<Poster>();
+           
             foreach (DataRow dRow in dTable.Rows)
             {
-                var movie = new Movie
+               movie = new Movie
                 {
                     Id = Convert.ToInt64(dRow["Id"]),
                     Title = Convert.ToString(dRow["Title"]),
                     Year = Convert.ToInt16(dRow["Year"]),
                     Length = Convert.ToInt16(dRow["Length"]),
-                    Sinopsis = Convert.ToString(dRow["Sinposis"]),
-                    Description = Convert.ToString(dRow["Discription"]),
+                    Sinopsis = Convert.ToString(dRow["Sinopsis"]),
+                    Description = Convert.ToString(dRow["Description"]),
                     Country = new Country
                     {
                         Id = Convert.ToInt64(dRow["CountryId"]),
@@ -68,13 +73,16 @@ namespace flix.Models
                     {
                         Id = Convert.ToInt64(dRow["DirectorId"]),
                         Name = Convert.ToString(dRow["DirectorName"])
-                    }
+                    },
+                    MovieActors = movieActorDbHelper.GetByMovieId(id),
+                    Genres = genreDbHelper.GetById(id),
+                    Posters = posterDbHelper.GetByMovieId(id)
                 };
 
-                movies.Add(movie);
+
             }
 
-            return movies;
+            return movie;
         }
 
         public List<Movie> GetByName(string title)

@@ -9,6 +9,7 @@ namespace flix.Models
 {
     public class ReviewDBHelper : DBHelper
     {
+
         public ReviewDBHelper()
         {
             Initialize();

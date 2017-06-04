@@ -186,6 +186,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LandingController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -210,21 +211,36 @@
       <DependentUpon>Login.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Actor.cs" />
-    <Compile Include="Models\ConnectionDB.cs" />
+    <Compile Include="Models\ActorDBHelper.cs" />
+    <Compile Include="Models\HomeDBHelper.cs" />
+    <Compile Include="Models\ConutryDBHelper.cs" />
     <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\DBHelper.cs" />
     <Compile Include="Models\Director.cs" />
+    <Compile Include="Models\DirectorDBHelper.cs" />
     <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\GenreDBHelper.cs" />
     <Compile Include="Models\GetLastReviews.cs" />
     <Compile Include="Models\GetTopUserReviewers.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\MostPopularMovie.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieDBHelper.cs" />
+    <Compile Include="Models\MovieList.cs" />
+    <Compile Include="Models\MovieActor.cs" />
+    <Compile Include="Models\MovieActorDBHelper.cs" />
     <Compile Include="Models\perfil.cs" />
     <Compile Include="Models\Poster.cs" />
+    <Compile Include="Models\PosterDBHelper.cs" />
     <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\ReviewDBHelper.cs" />
+    <Compile Include="Models\ReviewList.cs" />
     <Compile Include="Models\Trailer.cs" />
+    <Compile Include="Models\TrailerDBHelper.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Models\User_Genre.cs" />
+    <Compile Include="Models\UserDBHelper.cs" />
+    <Compile Include="Models\UserGenre.cs" />
+    <Compile Include="Models\UserGenreDBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs">
       <DependentUpon>Login.tt</DependentUpon>
@@ -542,9 +558,9 @@
     <Content Include="Views\User\UserRegister.cshtml" />
     <Content Include="Views\User\RegSucces.cshtml" />
     <Content Include="Views\Landing\Landing.cshtml" />
-    <Content Include="Views\Perfil\perfil.cshtml" />
+    <Content Include="Views\Perfil\Perfil.cshtml" />
     <Content Include="Views\User\publicar.cshtml" />
-    <Content Include="Views\Review\review.cshtml" />
+    <Content Include="Views\Review\Review.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\UserDashBoard.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />

@@ -6,8 +6,6 @@
 
 }
 
-
-
 <body class="" style="background-color:#2e313f;">
     <div class="parallax">
         <div>
@@ -63,13 +61,14 @@
                                 @foreach (var poster in Model.LGetLastReviews)
                                 {
                                     <div>
-                                        <a href="/Review/Review/?=@poster.Id" id="tag<%=count++%" name="@poster.Id">
-                                            <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@poster.Path )" alt="Image">
+                                        
+                                        <a href="@Url.Action("Review","Review", new {id = poster.Id})" >
+                                            <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/" + @poster.Path)" alt="Image">
                                         </a>
                                         <div class="subtitulo">
                                             @poster.Title
                                             @poster.Date
-                                        </div> 
+                                        </div>
                                     </div>
                                 }
 

@@ -28,7 +28,34 @@ namespace flix.Models
 
             return response >= 1 ? true : false;
         }
+        public List<Poster> GetByMovieId(long id)
+        {
+            List<Poster> posters = new List<Poster>();
 
+            SqlCommand cmd = new SqlCommand("Poster_GetByMovieId", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Movie_Id", id);
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(cmd);
+            DataTable dTable = new DataTable();
+
+            connection.Open();
+            dataAdapt.Fill(dTable);
+            connection.Close();
+
+            foreach (DataRow dRow in dTable.Rows)
+            {
+                var poster = new Poster
+                {
+              
+                    PathImage = Convert.ToString(dRow["PathImage"])
+                   
+                };
+
+                posters.Add(poster);
+            }
+
+            return posters;
+        }
         public List<Poster> GetById(long id)
         {
             List<Poster> posters = new List<Poster>();
@@ -55,8 +82,8 @@ namespace flix.Models
                         Title = Convert.ToString(dRow["MovieTitle"]),
                         Year = Convert.ToInt16(dRow["MovieYear"]),
                         Length = Convert.ToInt16(dRow["MovieLength"]),
-                        Sinopsis = Convert.ToString(dRow["MovieSinposis"]),
-                        Description = Convert.ToString(dRow["MovieDiscription"]),
+                        Sinopsis = Convert.ToString(dRow["MovieSinopsis"]),
+                        Description = Convert.ToString(dRow["MovieDescription"]),
                         Country = new Country
                         {
                             Id = Convert.ToInt64(dRow["CountryId"]),

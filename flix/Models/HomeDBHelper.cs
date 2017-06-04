@@ -83,7 +83,7 @@ namespace flix.Models
         {
             List<GetLastReviews> lastReviewses= new List<GetLastReviews>();
             SqlConnection connection = new SqlConnection(StrConnection);
-            string cmd = "GetLastReviews";
+            string cmd = "GetLastMovieReviews";
             SqlCommand sqlCmd = new SqlCommand(cmd, connection);
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.Parameters.Add("@Top", SqlDbType.VarChar).Value = top.ToString();
@@ -94,7 +94,7 @@ namespace flix.Models
                 GetLastReviews getLasR = new GetLastReviews();
                 getLasR.Id = long.Parse(dr["Id"].ToString());
                 getLasR.Title = dr["Title"].ToString();
-                getLasR.Path= dr["Path_Image"].ToString();
+                getLasR.Path= dr["PathImage"].ToString();
                 getLasR.Comment = dr["Comment"].ToString();
                 getLasR.Date = DateTime.Parse(dr["Date"].ToString());
                 lastReviewses.Add(getLasR);
@@ -109,7 +109,7 @@ namespace flix.Models
         {
             List<ReviewList> lastReviewses = new List<ReviewList>();
             SqlConnection connection = new SqlConnection(StrConnection);
-            string cmd = "ReviewList";
+            string cmd = "Review_GetList";
             SqlCommand sqlCmd = new SqlCommand(cmd, connection);
             sqlCmd.CommandType = CommandType.StoredProcedure;
             sqlCmd.Parameters.Add("@Top", SqlDbType.VarChar).Value = top.ToString();
@@ -151,7 +151,7 @@ namespace flix.Models
                 MostPopularMovie gtMostPopularMovie = new MostPopularMovie();
                 gtMostPopularMovie.Id = long.Parse(dr["Id"].ToString());
                 gtMostPopularMovie.Title = dr["Title"].ToString();
-                gtMostPopularMovie.Path = dr["Path_Image"].ToString();
+                gtMostPopularMovie.Path = dr["PathImage"].ToString();
                 gtMostPopularMovie.Rank = char.Parse(dr["Calificacion"].ToString());
                 getRankMovie.Add(gtMostPopularMovie);
             }

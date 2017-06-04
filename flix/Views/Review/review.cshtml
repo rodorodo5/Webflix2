@@ -1,8 +1,8 @@
-﻿@model flix.Models.Review
+﻿@model flix.Models.Movie
 
 
 @{
-    ViewBag.Title = "review";
+    ViewBag.Title = "Review";
 }
 
 <body class="body-content" style="background-color:#2e313f;">
@@ -27,19 +27,41 @@
                             <div class="container" style="margin-left:100px;">
                                 <div class="row">
 
-                                    <div style="height:400px;" class="col-md-3">
-                                        <a><img style="width: 265px;height: 391px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"  src="@Href("~/Content/starw.png" )" /></a>
+                                    <div style="height: 400px;" class="col-md-3">
+                                        @foreach (var poster in Model.Posters)
+                                        {
+                                            <a><img style="width: 265px; height: 391px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="@Href("~/Content/" + @poster.PathImage)"/></a>
+                                    
+                                        }
                                     </div>
                                     <div style="height:400px; background-color:#8b3337;border-radius:15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
                                           class="col-md-5">
                                             <div class="body-content" style="margin-top:30px;">
                                                 <h2 id="Title"></h2>
-                                                <p class="moviedes">ANIO: + Variable</p>
-                                                <p class="moviedes">AUTOR: + Variable</p>
-                                                <p class="moviedes">ACTORES: + Variable</p>
-                                                <p class="moviedes">BLAH: + Variable</p>
-                                                <p class="moviedes">BLAH: + Variable</p>
-                                                <p class="moviedes">BLAH: + Variable</p>
+                                             
+                                                <p class="moviedes">Titulo:@Model.Title</p>
+
+                                                <p class="moviedes">Yo Soy Un Actor</p>
+                                                @foreach (var actor in Model.MovieActors)
+                                                {
+                                                    <p class="moviedes">@actor.CharacterName</p>
+                                                    <p class="moviedes">@actor.CharacterDescription</p>
+                                                    <p class="moviedes">@actor.Protagonist</p>
+                                                    <p class="moviedes">@actor.VoiceOnly</p>
+                                                
+                                                }
+                                                <p class="moviedes">Soy Descripcion de Pelicula</p>
+                                                    <p class="moviedes">@Model.Description</p>
+                                                    <p class="moviedes">@Model.Year</p>
+                                                    <p class="moviedes">@Model.Country.Name</p>
+                                                    <p class="moviedes">@Model.Sinopsis</p>
+                                                
+                                                @foreach (var genre in Model.Genres)
+                                                {
+                                                    <p class="moviedes">@genre.Name</p>
+                                                
+                                                }
+                                               
                                             </div>
                                     </div>
 
@@ -53,21 +75,16 @@
                    
 
 
-                    @foreach (var popular in Model.LReviewList)
+                    @*@foreach (var popular in Model.LMovies)
                     {
 
                         <div class="panel panel-default">
-                            <div class="panel-heading">@popular.name</div>
+                            <div class="panel-heading">@popular.Title</div>
                             <div class="panel-body">
-                                @popular.Comment
+                                @popular.Description
                             </div>
                         </div>
-                    }
-
-
-
-
-
+                    }*@
 
                     <div class="panel panel-default">
                       <div class="panel-heading">Create Review</div>
@@ -77,7 +94,7 @@
 
                            <div class="col-md-4">
                                <label>Comment:</label>
-                                @Html.TextBoxFor(m => m.Comment, new { @class="form-control" })
+                                @*@Html.TextBoxFor(m => m.LMovies., new { @class="form-control" })*@
                                @*@Html.ValidationMessageFor(m => m.Comment)*@
                            </div>
                         <div class="col-md-2">
@@ -85,9 +102,9 @@
                                 <label>Watched:</label>
                                 <br />
 
-                              <p>@Html.RadioButtonFor(model => model.Watched, true) Yes</p> 
+                              @*<p>@Html.RadioButtonFor(model => model., true) Yes</p> 
 
-                             <p>@Html.RadioButtonFor(model => model.Watched, false) No</p>  
+                             <p>@Html.RadioButtonFor(model => model.Watched, false) No</p>*@  
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -95,9 +112,9 @@
                                 <label>Wished:</label>
                                 <br />
 
-                                <p>@Html.RadioButtonFor(model => model.Wished, true) Yes</p>
+                                @*<p>@Html.RadioButtonFor(model => model.Wished, true) Yes</p>
 
-                                <p>@Html.RadioButtonFor(model => model.Wished, false) No</p>
+                                <p>@Html.RadioButtonFor(model => model.Wished, false) No</p>*@
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -105,14 +122,14 @@
                                 <label>Rank (1-5):</label>
                                 <br />
 
-                                @Html.DropDownListFor(m => m.Rank, new List<SelectListItem>
+                                @*@Html.DropDownListFor(m => m, new List<SelectListItem>
                                    { new SelectListItem{Text="1", Value="1"},
                                      new SelectListItem{Text="2", Value="2"},
                                      new SelectListItem{Text="3", Value="3"},
                                      new SelectListItem{Text="4", Value="4"},
                                      new SelectListItem{Text="5", Value="5"},
                                      },
-                                     "Rank")
+                                     "Rank")*@
                            
                             </div>
                         </div>
@@ -121,14 +138,14 @@
                                 <label>Userid:</label>
                                 <br />
 
-                                @Html.TextBoxFor(m => m.User.Id, new { @class = "form-control" })
+                                @*@Html.TextBoxFor(m => m.User.Id, new { @class = "form-control" })*@
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div>
                                 <label>movie id:</label>
                                 <br />
-                                @Html.TextBoxFor(m => m.Movie.Id, new { @class = "form-control" })
+                                @*@Html.TextBoxFor(m => m.Movie.Id, new { @class = "form-control" })*@
                             </div>
                         </div>
                         <input type="submit" value="Submit" />
