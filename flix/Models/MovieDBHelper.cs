@@ -40,6 +40,7 @@ namespace flix.Models
             MovieActorDbHelper movieActorDbHelper = new MovieActorDbHelper();
             MovieGenreDBHelper moviegenreDbHelper = new MovieGenreDBHelper();
             PosterDBHelper posterDbHelper = new PosterDBHelper();
+            TrailerDBHelper trailerDbHelper = new TrailerDBHelper();
 
             SqlCommand cmd = new SqlCommand("Movie_GetById", connection);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -50,9 +51,6 @@ namespace flix.Models
             connection.Open();
             dataAdapt.Fill(dTable);
             connection.Close();
-            List<Actor> actors = new List<Actor>();
-            List<Genre> genre = new List<Genre>();
-            List<Poster> posters = new List<Poster>();
            
             foreach (DataRow dRow in dTable.Rows)
             {
@@ -77,7 +75,9 @@ namespace flix.Models
                     },
                     MovieActors = movieActorDbHelper.GetByMovieId(id),
                     Genres = moviegenreDbHelper.GetByMovieId(id),
-                    Posters = posterDbHelper.GetByMovieId(id)
+                    Posters = posterDbHelper.GetByMovieId(id),
+                    Trailers = trailerDbHelper.GetByMovieId(id,4)
+                   
                 };
 
 
@@ -108,8 +108,8 @@ namespace flix.Models
                     Title = Convert.ToString(dRow["Title"]),
                     Year = Convert.ToInt16(dRow["Year"]),
                     Length = Convert.ToInt16(dRow["Length"]),
-                    Sinopsis = Convert.ToString(dRow["Sinposis"]),
-                    Description = Convert.ToString(dRow["Discription"]),
+                    Sinopsis = Convert.ToString(dRow["Sinopsis"]),
+                    Description = Convert.ToString(dRow["Description"]),
                     Country = new Country
                     {
                         Id = Convert.ToInt64(dRow["CountryId"]),
@@ -150,8 +150,8 @@ namespace flix.Models
                     Title = Convert.ToString(dRow["Title"]),
                     Year = Convert.ToInt16(dRow["Year"]),
                     Length = Convert.ToInt16(dRow["Length"]),
-                    Sinopsis = Convert.ToString(dRow["Sinposis"]),
-                    Description = Convert.ToString(dRow["Discription"]),
+                    Sinopsis = Convert.ToString(dRow["Sinopsis"]),
+                    Description = Convert.ToString(dRow["Description"]),
                     Country = new Country
                     {
                         Id = Convert.ToInt64(dRow["CountryId"]),
@@ -225,6 +225,34 @@ namespace flix.Models
             connection.Close();
 
             return response >= 1 ? true : false;
+        }
+
+        public List<Movie> LikeName(string name)
+        {
+            List<Movie> movies = new List<Movie>();
+
+            SqlCommand cmd = new SqlCommand("Movie_LikeName", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Name", name);
+
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(cmd);
+            DataTable dTable = new DataTable();
+
+            connection.Open();
+            dataAdapt.Fill(dTable);
+            connection.Close();
+
+            foreach (DataRow dRow in dTable.Rows)
+            {
+                var movie = new Movie
+                {
+                    Id = Convert.ToInt64(dRow["Id"]),
+                    Title = Convert.ToString(dRow["Title"]),
+                };
+                movies.Add(movie);
+            }
+
+            return movies;
         }
     }
 }

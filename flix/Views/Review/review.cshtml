@@ -26,15 +26,15 @@
 
                             <div class="container" style="margin-left:100px;">
                                 <div class="row">
-
-                                    <div style="height: 400px;" class="col-md-3">
+                              
+                                    <div style="height: 700px;" class="col-md-3">
                                         @foreach (var poster in Model.Posters)
                                         {
                                             <a><img style="width: 265px; height: 391px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="@Href("~/Content/" + @poster.PathImage)"/></a>
                                     
                                         }
                                     </div>
-                                    <div style="height:400px; background-color:#8b3337;border-radius:15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                                    <div style="height:700px; background-color:#8b3337;border-radius:15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
                                           class="col-md-5">
                                             <div class="body-content" style="margin-top:30px;">
                                                 <h2 id="Title"></h2>
@@ -57,7 +57,7 @@
                                                 <p class="moviedes">@Model.Country.Abbv</p>
                                                 <p class="moviedes">@Model.Sinopsis</p>
                                                     <p class="moviedes">@Model.Length</p>
-                                                
+                                                    
                                                 
                                                 <p class="moviedes">Son Generos de Pelicula</p>
                                                 @foreach (var genre in Model.Genres)
@@ -65,9 +65,14 @@
                                                     <p class="moviedes">@genre.Name</p>
                                                 
                                                 }
-                                                
-                                              
-                                               
+                                                <p class="moviedes">Son Trailers</p>
+                                                @foreach (var trailer in Model.Trailers)
+                                                {
+                                                    <p class="moviedes">Titulo:@trailer.Url</p>
+
+                                                }
+    
+
                                             </div>
                                     </div>
 

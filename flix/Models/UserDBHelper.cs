@@ -60,17 +60,17 @@ namespace flix.Models
                     Username = Convert.ToString(dRow["Username"]),
                     Email = Convert.ToString(dRow["Email"]),
                     Password = Convert.ToString(dRow["Password"]),
-                    PathImage = Convert.ToString(dRow["PathImag"]),
+                    PathImage = Convert.ToString(dRow["PathImage"]),
                     Age = Convert.ToInt16(dRow["Age"]),
                     User_Genre = new UserGenre
                     {
                         Id = Convert.ToInt64(dRow["UserGenderId"]),
-                        Name = Convert.ToString(dRow["UserGenderString"])
+                        Name = Convert.ToString(dRow["UserGenderName"])
                     }
                    
                 };
-
                 users.Add(user);
+             
             }
 
             return users;

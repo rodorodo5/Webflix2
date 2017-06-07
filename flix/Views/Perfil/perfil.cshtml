@@ -1,4 +1,4 @@
-﻿@model flix.Models.perfil
+﻿@model flix.Models.UserViewMovel
 @{
     ViewBag.Title = "perfil";
 }
@@ -8,22 +8,18 @@
 
 
 
-
-
-
-
-
     <div class="body-content" style="padding-top: 20px;margin-left: 20px;margin-right: 20px;">
 
-        <div class="panel panel-default" style="background-color:#8b3337;">
-            <div class="panel-body">
-                <h2 style="color:white;font-size:35px;text-align:center;" class="titles">TU PERFIL</h2>
-            </div>
+    <div class="panel panel-default" style="background-color:#8b3337;">
+        <div class="panel-body">
+            <h2 style="color:white;font-size:35px;text-align:center;" class="titles">TU PERFIL</h2>
         </div>
+    </div>
+    </div>
 
 
 
-     
+       
 
             <div class="center" style="text-align:center;background-color:white;border-radius:15px;">
 
@@ -36,17 +32,26 @@
                                 <div style="height:400px;text-align:center;" class="col-md-3">
                                     <h3 style="color:white;background-color:#8b3337;border-radius:15px;">FOTO DE PERFIL</h3>
                                     @*aqui si pueden ser los robots!*@
-                                    <a><img style="width: 265px;height: 391px;" src="~/Content/starw.jpg" /></a>
+                                  
+                                    @foreach (var user in Model.LUser)
+                                    {
+                                        <a><img style="width: 200px;height: 300px;" src="@Href("~/Content/" + @user.PathImage)" /></a>
+                                    }
+                                
                                 </div>
                                 <div style="height:450px; background-color:#8b3337;border-radius:15px;" class="col-md-5">
                                     <div class="body-content" style="margin-top:30px;">
-                                        <p class="moviedes">NOMBRE: + Variable</p>
-                                        <p class="moviedes">ANIO: + Variable</p>
-                                        <p class="moviedes">AUTOR: + Variable</p>
-                                        <p class="moviedes">ACTORES: + Variable</p>
-                                        <p class="moviedes">BLAH: + Variable</p>
-                                        <p class="moviedes">BLAH: + Variable</p>
-                                        <p class="moviedes">BLAH: + Variable</p>
+                                        @foreach (var user in Model.LUser)
+                                        {   
+                                            <p class="moviedes">Nombre:@user.Name</p>
+                                            <p class="moviedes">Email:@user.Email</p>
+                                            <p class="moviedes">Age:@user.Age</p>
+                                            <p class="moviedes">LastName:@user.LastName</p>
+                                            <p class="moviedes">Genre:@user.User_Genre.Name</p>
+                                            <p class="moviedes">Username:@user.Username</p>
+
+                                        }
+                                       
                                     </div>
                                 </div>
 

@@ -93,8 +93,8 @@
       <HintPath>..\packages\MongoDB.Bson.2.4.3\lib\net45\MongoDB.Bson.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MongoDB.Driver, Version=2.4.2.27, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MongoDB.Driver.2.4.2\lib\net45\MongoDB.Driver.dll</HintPath>
+    <Reference Include="MongoDB.Driver, Version=2.4.3.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.4.3\lib\net45\MongoDB.Driver.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MongoDB.Driver.Core, Version=2.4.3.23, Culture=neutral, processorArchitecture=MSIL">
@@ -208,6 +208,8 @@
     <Compile Include="Models\GetLastReviews.cs" />
     <Compile Include="Models\GetTopUserReviewers.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\MongoMovieDbHelper.cs" />
+    <Compile Include="Models\Mongo\MongoMovie.cs" />
     <Compile Include="Models\MostPopularMovie.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MovieDBHelper.cs" />
@@ -216,12 +218,14 @@
     <Compile Include="Models\MovieList.cs" />
     <Compile Include="Models\MovieActor.cs" />
     <Compile Include="Models\MovieActorDBHelper.cs" />
-    <Compile Include="Models\perfil.cs" />
+    <Compile Include="Models\Perfil.cs" />
     <Compile Include="Models\Poster.cs" />
     <Compile Include="Models\PosterDBHelper.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\ReviewDBHelper.cs" />
     <Compile Include="Models\ReviewList.cs" />
+    <Compile Include="Models\UserViewMovel.cs" />
+    <Compile Include="Models\SearchBar.cs" />
     <Compile Include="Models\Trailer.cs" />
     <Compile Include="Models\TrailerDBHelper.cs" />
     <Compile Include="Models\User.cs" />
@@ -535,6 +539,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\Api\" />
     <Folder Include="Resources\Libraries\NewFolder1\" />
     <Folder Include="Resources\Library\" />
   </ItemGroup>

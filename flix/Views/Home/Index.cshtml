@@ -6,6 +6,38 @@
 
 }
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#Search").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Home/Home",
+                    type: "POST",
+                    dataType: "json",
+                    data: { Prefix: request.term },
+                    success: function(data) {
+                        response($.map(data,
+                            function(item) {
+                                return { label: item.ID, value: item.Title };
+                            }));
+
+                    }
+                });
+            },
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+    })
+</script> 
+
+ 
+
+
 <body class="" style="background-color:#2e313f;">
     <div class="parallax">
         <div>
@@ -29,13 +61,27 @@
                     
                 </ul>
             </div>
+            
+                <div class="form-horizontal">
 
-            <input type="text" placeholder="Search for anything" />
+                    <hr/>
 
-            <button type="submit" value="Search">Search</button>
+                    <div class="form-group">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="col-md-12">
+                            @Html.EditorFor(model => model.Movie.Title, new {htmlAttributes = new {Id = "Search", @class = "form-control"}})
+                 
+                        </div>
+                    } 
+                    </div>
+                    <button type="submit" value="Search">Search</button>
+                </div>
         </form>
     </div>
-
+  
 
 
 
@@ -79,10 +125,6 @@
                     </div>
                 </div>
 
-
-
-
-
                 <div class="panel panel-default" style="background-color:#8b3337;">
                     <div class="panel-body">
                         <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Más populares</h2>
@@ -90,7 +132,7 @@
                 </div>
 
 
-
+              
                 <div class="panel panel-default" style="background-color:white;">
                     <div class="panel-body">
 
@@ -101,17 +143,19 @@
                                {
                                   
                                    <div>
-                                       <a>
-                                           <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/"+@popular.Path )" alt="Image" >
+                                     
+                                       
+                                       <a href="@Url.Action("Review","Review", new {id = popular.Id})" >
+                                           <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/" + @popular.Path)" alt="Image">
                                        </a>
 
-                                        <div class="subtitulo"  >
-                                                 @popular.Title
-                                                 @popular.Rank
+                                       <div class="subtitulo">
+                                           @popular.Title
+                                           @popular.Rank
 
-                            
-                                        </div>
-                                 </div>
+
+                                       </div>
+                                   </div>
                                }
                                     
                             </section>
@@ -137,14 +181,17 @@
                       
                         @foreach (var movie in Model.LMovie)
                         {
-                            <div class="sidepanels"><p style="margin-left:15px;">@movie.Title</p></div>
+
+                                   <a href="@Url.Action("Review","Review", new {id=movie.Id})">
+                                   <div class="sidepanels"><p style="margin-left:15px;">@movie.Title</p></div>
+                                   </a>
                         }
 
                     </div>
                 </div>
                 <div class="panel panel-default" style="background-color:#8b3337;margin-top: 37px;margin-bottom: 39px;">
                     <div class="panel-body">
-                        <h2 style="color:white;font-size:20px;text-align:center;" class="titles">Peliculas con mas reviews</h2>
+                        <h2 style="color:white;font-size:20px;text-align:center;" class="titles">Usuarios mas Activos</h2>
                     </div>
                 </div>
 
@@ -154,16 +201,16 @@
                         @foreach (var user in Model.LGetTopUserReviewerses)
                         {
 
-                            @*<div class="sidepanels"><p style="margin-left:15px;">@user.Id</p></div>*@
-                            <div class="sidepanels"><p style="margin-left:15px;">@user.Username</p></div>
-                            @*<div class="sidepanels"><p style="margin-left:15px;">@user.Reviews</p></div>*@
-                          
-                        }
-                    </div>
+                                <a href="@Url.Action("Perfil","Perfil", new {id=user.Id})">
+                                <div class="sidepanels"><p style="margin-left:15px;">@user.Username</p></div>
+                                </a>
+
+                                }
+</div>
                 </div>
             </div>
 
-       
+      
 
        </div>
     </div>
@@ -256,6 +303,7 @@
             $(window).resize(function () {
                 resizeElements();
             });
+
         });
     </script>
 

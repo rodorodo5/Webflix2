@@ -9,7 +9,7 @@ namespace flix.Models
 {
     public class DirectorDBHelper : DBHelper
     {
-
+        
         public DirectorDBHelper()
         {
             Initialize();
@@ -19,7 +19,7 @@ namespace flix.Models
         {
             SqlCommand cmd = new SqlCommand("Director_Add", connection);
             cmd.CommandType = CommandType.StoredProcedure;
-
+            
             cmd.Parameters.AddWithValue("@Name", director.Name);
 
             connection.Open();
