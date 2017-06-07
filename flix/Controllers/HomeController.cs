@@ -27,7 +27,7 @@ namespace flix.Controllers
             return View(viewModel);
         }
 
-<<<<<<< HEAD
+
         //public ActionResult UserL()
         //{
         //    var viewModel = new UserL();
@@ -35,17 +35,16 @@ namespace flix.Controllers
         //}
 
 
-=======
         [HttpPost]
         public JsonResult Home(string Prefix)
         {
             var y = new MongoMovieDbHelper();
-            List<MongoMovie> searchBars = new List<MongoMovie>();
-            searchBars = y.nose(Prefix);
+           // List<MongoMovie> searchBars = new List<MongoMovie>();
+            searchBars = dataMongo.SearchMovieName(Prefix,"pelicula");
             //var x = (from N in searchBars where N.Title.StartsWith(search) select new {N.Title});
             return Json(searchBars, JsonRequestBehavior.AllowGet);
         }
->>>>>>> 0762f3d65594c5d05988379ccb37fb08d835a7f7
+
        
     }
 }
