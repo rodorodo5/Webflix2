@@ -21,7 +21,7 @@ namespace flix.Models
             //FilterDefinition<MongoMovie> filter = "{Title : { $regex: '/"+value+"/', $options: 'i' }}";
             //var builder = Builders<MongoMovie>.Filter;
             var filter = Builders<MongoMovie>.Filter.Regex("Title",new BsonRegularExpression("/^"+value+"/"));
-
+            
             var movies = coll.Find(filter).Limit(10).ToList();
 
             return movies;

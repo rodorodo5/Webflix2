@@ -1,0 +1,5 @@
+C:\Users\Rodolfo\Documents\gitt\ModalLogin.BL\bin\Release\ModalLogin.BL.dll
+C:\Users\Rodolfo\Documents\gitt\ModalLogin.BL\bin\Release\ModalLogin.BL.pdb
+C:\Users\Rodolfo\Documents\gitt\ModalLogin.BL\obj\Release\ModalLogin.BL.csprojResolveAssemblyReference.cache
+C:\Users\Rodolfo\Documents\gitt\ModalLogin.BL\obj\Release\ModalLogin.BL.dll
+C:\Users\Rodolfo\Documents\gitt\ModalLogin.BL\obj\Release\ModalLogin.BL.pdb

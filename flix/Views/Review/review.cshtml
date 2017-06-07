@@ -1,4 +1,4 @@
-﻿@model flix.Models.Movie
+﻿@model flix.Models.MovieReviewsModel
 
 
 @{
@@ -39,8 +39,10 @@
                                             <div class="body-content" style="margin-top:30px;">
                                                 <h2 id="Title"></h2>
                                              
-                                                <p class="moviedes">Titulo:@Model.Title</p>
-
+                                            @foreach (var actor in Model.Movie)
+                                            {
+                                                <p class="moviedes">Titulo:@actor.Title</p>
+                                            }
                                                 <p class="moviedes">Yo Soy Un Actor</p>
                                                 @foreach (var actor in Model.MovieActors)
                                                 {
@@ -50,13 +52,19 @@
                                                     <p class="moviedes">@actor.VoiceOnly</p>
                                                 
                                                 }
-                                                <p class="moviedes">Soy Descripcion de Pelicula</p>
-                                                    <p class="moviedes">@Model.Description</p>
-                                                    <p class="moviedes">@Model.Year</p>
-                                                    <p class="moviedes">@Model.Country.Name</p>
-                                                <p class="moviedes">@Model.Country.Abbv</p>
-                                                <p class="moviedes">@Model.Sinopsis</p>
-                                                    <p class="moviedes">@Model.Length</p>
+                                                @foreach (var actor in Model.Movie)
+                                                {
+                                                    <p class="moviedes">Soy Descripcion de Pelicula</p>
+                                                    <p class="moviedes">@actor.Title</p>
+                                                    <p class="moviedes">@actor.Year</p>
+                                                    <p class="moviedes">@actor.Country.Name</p>
+                                                    <p class="moviedes">@actor.Country.Abbv</p>
+                                                    <p class="moviedes">@actor.Sinopsis</p>
+                                                    <p class="moviedes">@actor.Length</p>
+
+
+                                                }
+                                            
                                                     
                                                 
                                                 <p class="moviedes">Son Generos de Pelicula</p>
@@ -162,6 +170,15 @@
                         <input type="submit" value="Submit" />
 
                             }
+                           @foreach (var review in Model.LReviews)
+                           {
+                               <p class="moviedes">Titulo:@review.User_Id</p>
+                               <p class="moviedes">Titulo:@review.Comment</p>
+                               <p class="moviedes">Titulo:@review.Date</p>
+                               <p class="moviedes">Titulo:@review.Rank</p>
+                               <p class="moviedes">Titulo:@review.Watched</p>
+                               <p class="moviedes">Titulo:@review.Wished</p>
+                           }
                         </div>
                     </div>
 

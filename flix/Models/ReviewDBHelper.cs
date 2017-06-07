@@ -225,5 +225,45 @@ namespace flix.Models
 
             return response >= 1 ? true : false;
         }
+
+        public List<Review> GetByUserId(long id)
+        {
+            List<Review> reviews = new List<Review>();
+
+            SqlCommand cmd = new SqlCommand("Review_GetByUser", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", id);
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(cmd);
+            DataTable dTable = new DataTable();
+
+            connection.Open();
+            dataAdapt.Fill(dTable);
+            connection.Close();
+
+            foreach (DataRow dRow in dTable.Rows)
+            {
+                var review = new Review
+                {
+                   
+                    Comment = Convert.ToString(dRow["Comment"]),
+                    Rank = Convert.ToInt16(dRow["Rank"]),
+                    Watched = Convert.ToBoolean(dRow["Watched"]),
+                    Wished = Convert.ToBoolean(dRow["Wished"]),
+                    Date = Convert.ToDateTime(dRow["Date"]),
+                    Movie = new Movie
+                    {
+                        Id = Convert.ToInt64(dRow["Movie_Id"]),
+                        Title = Convert.ToString(dRow["Title"]),
+                      
+                      },
+                  
+                 
+                };
+
+                reviews.Add(review);
+            }
+
+            return reviews;
+        }
     }
 }

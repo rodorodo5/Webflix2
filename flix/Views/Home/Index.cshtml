@@ -5,10 +5,13 @@
     ViewBag.Title = "Index";
 
 }
-
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
+<script src="~/Resources/Libraries/slick-1.6.0/slick/slick.min.js"></script>
+<script src="~/Resources/Libraries/slick-1.6.0/slick/slick.js"></script>
+
+
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -29,7 +32,7 @@
                 });
             },
             messages: {
-                noResults: "", results: ""
+                noResults: "Data Not Found", results: ""
             }
         });
     })
@@ -51,34 +54,29 @@
     margin-left: auto;">
 
         <form class="search_bar larger">
-            <div class="search_dropdown" style="width: 16px;">
-                <span>All</span>
-                <ul>
-                    <li class="selected">All</li>
-                    <li>Actores</li>
-                    <li>Pelicula</li>
-                    <li>Genero</li>
-                    
-                </ul>
-            </div>
-            
-                <div class="form-horizontal">
+            @Html.DropDownList("Opciones",new List<SelectListItem>
+            {
+                new SelectListItem {Text="Pelicula", Value = "1"},
+                new SelectListItem {Text = "Genero", Value = "2"}
+            },FormMethod.Post)
+            <button type="submit" value="Search">Search</button>
+            <div class="form-horizontal">
 
-                    <hr/>
+                <hr/>
 
-                    <div class="form-group">
+                <div class="form-group">
                     @using (Html.BeginForm())
                     {
                         @Html.AntiForgeryToken()
 
                         <div class="col-md-12">
                             @Html.EditorFor(model => model.Movie.Title, new {htmlAttributes = new {Id = "Search", @class = "form-control"}})
-                 
+
                         </div>
-                    } 
-                    </div>
-                    <button type="submit" value="Search">Search</button>
+                    }
                 </div>
+                <button type="submit" value="Search">Search</button>
+            </div>
         </form>
     </div>
   

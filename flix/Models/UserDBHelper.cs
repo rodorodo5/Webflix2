@@ -211,5 +211,66 @@ namespace flix.Models
 
             return response >= 1 ? true : false;
         }
+
+        public ProfileViewModel GetUserProfileById(long id)
+        {
+            ProfileViewModel users = new ProfileViewModel();
+            Movie movie = new Movie();
+            Review review = new Review();
+            Poster poster = new Poster();
+            List<Movie> PMovie = new List<Movie>();
+            List<Review> PReview = new List<Review>();
+            List<Poster> PPoster = new List<Poster>();
+
+
+            SqlCommand cmd = new SqlCommand("Review_GetByUser", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", id);
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(cmd);
+            DataTable dTable = new DataTable();
+
+            connection.Open();
+            dataAdapt.Fill(dTable);
+            connection.Close();
+
+            foreach (DataRow dRow in dTable.Rows)
+            {
+                poster = new Poster()
+                {
+                    PathImage = Convert.ToString(dRow["PathImage"])
+                };
+
+                movie = new Movie()
+                {
+                    Id = Convert.ToInt64(dRow["MovieId"]),
+                    Title = Convert.ToString(dRow["Title"]),
+                    
+                };
+                review = new Review()
+                {
+                    Id = Convert.ToInt64(dRow["ReviewId"]),
+                    Comment = Convert.ToString(dRow["Comment"]),
+                    Watched = Convert.ToBoolean(dRow["Watched"]),
+                    Rank = Convert.ToInt16(dRow["Rank"]),
+                    Wished = Convert.ToBoolean(dRow["Wished"]),
+                    Date = Convert.ToDateTime(dRow["Date"]),
+
+                };
+                PMovie.Add(movie);
+                PReview.Add(review);
+                PPoster.Add(poster);
+                users = new ProfileViewModel()
+                {
+                    LReviews = PReview,
+                    LMovie = PMovie,
+                    LPoster = PPoster
+                };
+               
+            }
+
+
+
+            return users;
+        }
     }
 }
