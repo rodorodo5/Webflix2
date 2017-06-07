@@ -26,11 +26,11 @@ namespace flix.Controllers
         }
 
         [HttpPost]
-        public JsonResult Home(string Prefix,string value)
+        public JsonResult Home(string Prefix)
         {
            
             var dataMongo = new MongoMovieDbHelper();
-            var searchBars = dataMongo.SearchMovieName(Prefix, value);
+            var searchBars = dataMongo.SearchMovieName(Prefix, "Pelicula");
             //var x = (from N in searchBars where N.Title.StartsWith(search) select new {N.Title});
             return Json(searchBars, JsonRequestBehavior.AllowGet);
         }

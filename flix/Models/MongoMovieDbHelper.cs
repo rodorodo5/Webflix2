@@ -11,7 +11,7 @@ using MongoDB.Driver;
 
 namespace flix.Models
 {
-    public class MongoMovieDbHelper 
+    public partial class MongoMovieDbHelper 
     {
         public List<MongoMovie> nose(string value)
         {
