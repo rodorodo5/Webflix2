@@ -9,6 +9,7 @@ namespace flix.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             var viewModel = new HomeViewModel()
@@ -19,9 +20,18 @@ namespace flix.Controllers
                 LMostPopularMovies = ConnectionDb.GetRankMovie(10),
                 LActors = ConnectionDb.GetActors(),
                 LGenres = ConnectionDb.GetGenres()
+               
             };
             return View(viewModel);
         }
+
+        //public ActionResult UserL()
+        //{
+        //    var viewModel = new UserL();
+        //    return View(viewModel);
+        //}
+
+
        
     }
 }

@@ -1,0 +1,96 @@
+﻿@model flix.Models.UserL
+
+@{
+    ViewBag.Title = "UserL";
+}
+
+<body>
+
+
+
+
+
+
+    @using (Html.BeginForm())
+    {
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form class="form-horizontal">
+                        <div class="modal-header">
+                            <div id="messenger">
+
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="form-group">
+                            <label for="UserName" class="col-lg-3 control-label">User Name:</label>
+                            <input class="form-control" id="UserName" placeholder="User Name" type="text" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Password" class="col-lg-3 control-label">Password:</label>
+                            <input class="form-control" id="Password" placeholder="Password" type="password" />
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-primary pull-left marg" id="Login">Login</a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    }
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#myModal").modal({
+                backdrop: 'static'
+            });
+        });
+
+        $("#Login").click(function () {
+            var dataObject = { UserName: $("#UserName").val(), Password: $("#Password").val() };
+            $.ajax({
+                url: '@Url.Action("UserL","UserL")',
+                type: "POST",
+                data: dataObject,
+                datatype: "json",
+                success: function (result) {
+                    if (result.toString() == "Success") {
+                        $("#myModal").modal('hide');
+
+                    }
+                    else {
+                        $("#UserName").val("");
+                        $("#Password").val("");
+                        $("#UserName").focus();
+                        $("#messenger").html('<div class="failed">' + result + '</div>');
+                    }
+                },
+                error: function (result) {
+                    console.log();
+                    $("#UserName").val("");
+                    $("#Password").val("");
+                    $("#UserName").focus();
+                    $("#messenger").html('<div class="failed"> Error, Intenta de nuevo </div>');
+                }
+            });
+        })
+    </script>
+
+
+
+</body>

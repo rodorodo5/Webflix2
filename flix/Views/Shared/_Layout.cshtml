@@ -9,7 +9,7 @@
     <title>@ViewBag.Title - Reviews Online</title>
     <link rel="stylesheet" type="text/css" href="~/Resources/Libraries/slick-1.6.0/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="~/Resources/Libraries/slick-1.6.0/slick/slick-theme.css"/>
-
+    <script src="http://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -46,7 +46,7 @@
 </head>
 <body>
     
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    @*<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>*@
     <script type="text/javascript" src="~/Resources/Libraries/slick-1.6.0/slick/slick.js"></script>
 
 
@@ -105,10 +105,11 @@
                         @if (Session["username"] == null)
                         {
 
-                              <li>@Html.ActionLink("Login", "Login", "Login")</li>
+                              <li>@Html.ActionLink("Login", "UserL", "UserL")</li>
                             <li>@Html.ActionLink("Register", "Register", "Login")</li>
                         }
-                    </li>
+
+                   </li>
 
 
 

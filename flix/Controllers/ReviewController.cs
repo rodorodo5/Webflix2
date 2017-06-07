@@ -19,11 +19,9 @@ namespace flix.Controllers
         {
             var movieData = new MovieDBHelper();
             var viewModel = movieData.GetById(id);
-            
-           
             return View(viewModel);
 
         }
-
+        
     }
 }

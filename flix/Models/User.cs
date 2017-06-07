@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -16,5 +19,10 @@ namespace flix.Models
         public string PathImage { get; set; }
         public short Age { get; set; }
         public UserGenre User_Genre { get; set; }
+
+
+   
+
     }
+
 }
