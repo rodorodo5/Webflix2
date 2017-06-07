@@ -5,8 +5,9 @@ using System.Web;
 
 namespace flix.Models
 {
-    public class Perfil
+    public class UserViewMovel
     {
-
+        public User User { get; set; }
+        public List<User> LUser { get; set; }
     }
 }

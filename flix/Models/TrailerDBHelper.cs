@@ -79,6 +79,7 @@ namespace flix.Models
 
         public List<Trailer> GetAll()
         {
+            
             List<Trailer> trailers = new List<Trailer>();
 
             SqlCommand cmd = new SqlCommand("Trailer_GetAll", connection);
@@ -169,5 +170,35 @@ namespace flix.Models
 
             return response >= 1 ? true : false;
         }
+        public List<Trailer> GetByMovieId(long Id,int Top)
+        {
+            List<Trailer> trailers = new List<Trailer>();
+
+            SqlCommand cmd = new SqlCommand("Trailer_GetByMovieId", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Id", Id);
+            cmd.Parameters.AddWithValue("@Top", Top);
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(cmd);
+            DataTable dTable = new DataTable();
+
+            connection.Open();
+            dataAdapt.Fill(dTable);
+            connection.Close();
+
+            foreach (DataRow dRow in dTable.Rows)
+            {
+                var trailer = new Trailer()
+                {
+                    
+                    Url = Convert.ToString(dRow["Url"])
+                    
+                };
+
+                trailers.Add(trailer);
+            }
+
+            return trailers;
+        }
+
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using flix.Models;
+using flix.Models.Mongo;
+using MongoDB.Bson;
 
 namespace flix.Controllers
 {
@@ -21,6 +23,16 @@ namespace flix.Controllers
                 LGenres = ConnectionDb.GetGenres()
             };
             return View(viewModel);
+        }
+
+        [HttpPost]
+        public JsonResult Home(string Prefix)
+        {
+            var y = new MongoMovieDbHelper();
+            List<MongoMovie> searchBars = new List<MongoMovie>();
+            searchBars = y.nose(Prefix);
+            //var x = (from N in searchBars where N.Title.StartsWith(search) select new {N.Title});
+            return Json(searchBars, JsonRequestBehavior.AllowGet);
         }
        
     }
