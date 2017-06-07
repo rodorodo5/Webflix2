@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using flix.Models.Mongo;
 
 namespace flix.Models
 {
@@ -20,10 +21,7 @@ namespace flix.Models
         public Country Country { get; set; }
         public Director Director { get; set; }
         public List<Movie> Actors { get; set; }
-        public List<MovieActor> MovieActors { get; set; }
-        public List<Genre> Genres { get; set; }
-        public List<Poster> Posters { get; set; }
-        public List<Trailer> Trailers { get; set; }
+       
 
     }
 }

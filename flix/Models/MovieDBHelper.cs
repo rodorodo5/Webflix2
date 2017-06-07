@@ -34,13 +34,14 @@ namespace flix.Models
             return response >= 1 ? true : false;
         }
 
-        public Movie GetById(long id)
+        public List<Movie> GetById(long id)
         {
+            List<Movie> Lmovie = new List<Movie>();
             Movie movie = new Movie();
-            MovieActorDbHelper movieActorDbHelper = new MovieActorDbHelper();
-            MovieGenreDBHelper moviegenreDbHelper = new MovieGenreDBHelper();
-            PosterDBHelper posterDbHelper = new PosterDBHelper();
-            TrailerDBHelper trailerDbHelper = new TrailerDBHelper();
+            //MovieActorDbHelper movieActorDbHelper = new MovieActorDbHelper();
+            //MovieGenreDBHelper moviegenreDbHelper = new MovieGenreDBHelper();
+            //PosterDBHelper posterDbHelper = new PosterDBHelper();
+            //TrailerDBHelper trailerDbHelper = new TrailerDBHelper();
 
             SqlCommand cmd = new SqlCommand("Movie_GetById", connection);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -73,17 +74,17 @@ namespace flix.Models
                         Id = Convert.ToInt64(dRow["DirectorId"]),
                         Name = Convert.ToString(dRow["DirectorName"])
                     },
-                    MovieActors = movieActorDbHelper.GetByMovieId(id),
-                    Genres = moviegenreDbHelper.GetByMovieId(id),
-                    Posters = posterDbHelper.GetByMovieId(id),
-                    Trailers = trailerDbHelper.GetByMovieId(id,4)
+                    //MovieActors = movieActorDbHelper.GetByMovieId(id),
+                    //Genres = moviegenreDbHelper.GetByMovieId(id),
+                    //Posters = posterDbHelper.GetByMovieId(id),
+                    //Trailers = trailerDbHelper.GetByMovieId(id,4)
                    
                 };
-
+                Lmovie.Add(movie);
 
             }
 
-            return movie;
+            return Lmovie;
         }
 
         public List<Movie> GetByName(string title)

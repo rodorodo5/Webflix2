@@ -1,4 +1,6 @@
 ﻿@model flix.Models.UserViewMovel
+
+
 @{
     ViewBag.Title = "perfil";
 }
@@ -33,10 +35,13 @@
                                     <h3 style="color:white;background-color:#8b3337;border-radius:15px;">FOTO DE PERFIL</h3>
                                     @*aqui si pueden ser los robots!*@
                                   
-                                    @foreach (var user in Model.LUser)
-                                    {
-                                        <a><img style="width: 200px;height: 300px;" src="@Href("~/Content/" + @user.PathImage)" /></a>
-                                    }
+                                   
+                                  @foreach (var user in Model.LUser)
+                                  {
+                                      <a><img style="width: 200px;height: 300px;" src="@Href("~/Content/" + @user.PathImage)" /></a>
+                                  }
+                                     
+                                   
                                 
                                 </div>
                                 <div style="height:450px; background-color:#8b3337;border-radius:15px;" class="col-md-5">
@@ -56,6 +61,37 @@
                                 </div>
 
                             </div>
+                            
+                            <div style="height:450px; background-color:#8b3337;border-radius:15px;" class="col-md-5">
+                                <div class="body-content" style="margin-top:30px;">
+                                     
+                                    @foreach (var reviews in Model.ProfileViewModel.LMovie)
+                                    { 
+                                        <p class="moviedes">Titulo:@reviews.Title</p>
+                                      
+                                    }
+                                   
+                                    @foreach (var reviews in Model.ProfileViewModel.LPoster)
+                                    { 
+                                        <a><img style="width: 200px;height: 300px;" src="@Href("~/Content/" +reviews.PathImage)" /></a> 
+                                    }
+                                    
+                                    @foreach (var reviews in Model.ProfileViewModel.LReviews)
+                                    { 
+                                        <p class="moviedes">Comentario:@reviews.Comment</p>
+                                        <p class="moviedes">Fecha:@reviews.Date</p>
+                                        <p class="moviedes">Rank:@reviews.Rank</p>
+                                      
+                                    }
+                                    
+                                     
+
+                                   
+                                       
+                                </div>
+                            </div>
+
+                            
 
                         </div>
 

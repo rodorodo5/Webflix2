@@ -5,13 +5,13 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar(max)" Nullable="false" />
-    <Property Name="LastName" Type="varchar(max)" Nullable="false" />
-    <Property Name="Username" Type="varchar(max)" Nullable="false" />
-    <Property Name="Email" Type="varchar(max)" Nullable="false" />
-    <Property Name="Password" Type="varchar(max)" Nullable="false" />
-    <Property Name="PathImage" Type="varchar(max)" Nullable="false" />
-    <Property Name="Age" Type="smallint" Nullable="false" />
+    <Property Name="name" Type="varchar(max)" Nullable="false" />
+    <Property Name="last_name" Type="varchar(max)" Nullable="false" />
+    <Property Name="username" Type="varchar(max)" Nullable="false" />
+    <Property Name="email" Type="varchar(max)" Nullable="false" />
+    <Property Name="password" Type="varchar(max)" Nullable="false" />
+    <Property Name="image" Type="varchar(max)" Nullable="false" />
+    <Property Name="age" Type="smallint" Nullable="false" />
     <Property Name="User_Genre_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityContainer Name="GoodMovieModelStoreContainer">

@@ -39,7 +39,7 @@ namespace flix.Models
             return movie;
 
         }
-    
+
         public static List<Genre> GetGenres()
         {
             List<Genre> genre = new List<Genre>();

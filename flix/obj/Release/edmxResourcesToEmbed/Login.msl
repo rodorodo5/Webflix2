@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="GoodMovieModelStoreContainer" CdmEntityContainer="GoodMovieEntities">
+  <EntityContainerMapping StorageEntityContainer="GoodMovieModelStoreContainer" CdmEntityContainer="GoodMovie">
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="GoodMovieModel.User">
         <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="age" ColumnName="age" />
           <ScalarProperty Name="User_Genre_Id" ColumnName="User_Genre_Id" />
         </MappingFragment>
       </EntityTypeMapping>
