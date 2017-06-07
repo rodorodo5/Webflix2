@@ -581,14 +581,17 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\logout.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\Admin\Admin.cshtml" />
+=======
     <Content Include="Views\UserL\UserL.cshtml" />
+>>>>>>> 9c003622f2d04b6241be47cc884d0ddf2643e54b
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Api\" />
     <Folder Include="Resources\Libraries\NewFolder1\" />
     <Folder Include="Resources\Library\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -256,6 +256,7 @@ namespace flix.Models
                     Date = Convert.ToDateTime(dRow["Date"]),
 
                 };
+            
                 PMovie.Add(movie);
                 PReview.Add(review);
                 PPoster.Add(poster);
@@ -271,6 +272,29 @@ namespace flix.Models
 
 
             return users;
+        }
+
+        public long UserExist(long id)
+        {
+            SqlCommand cmd = new SqlCommand("User_Exist", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@Id", id);
+
+          
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(cmd);
+            DataTable dTable = new DataTable();
+
+            connection.Open();
+            dataAdapt.Fill(dTable);
+            connection.Close();
+            int response = 0;
+            foreach (DataRow dRow in dTable.Rows)
+            {
+                response = unchecked ((int)Convert.ToInt64(dRow["Exists"]));
+            }
+            
+            return response;
         }
     }
 }

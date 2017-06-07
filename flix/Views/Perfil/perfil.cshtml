@@ -26,9 +26,6 @@
     </div>
 
 
-
-       
-
             <div class="center" style="text-align:center;background-color:white;border-radius:15px;">
 
                 <div class="panel panel-default" >
@@ -70,26 +67,60 @@
                             
                             <div style="height:450px; background-color:#8b3337;border-radius:15px;" class="col-md-5">
                                 <div class="body-content" style="margin-top:30px;">
+<<<<<<< HEAD
                                      
                                     @foreach (var reviews in Model.ProfileViewModel.LMovie)
                                     { 
                                         <p class="moviedes">Titulo:@reviews.Title</p>
                                      
-                                    }
-                                   
-                                    @foreach (var reviews in Model.ProfileViewModel.LPoster)
-                                    { 
-                                        <a><img style="width: 200px;height: 300px;" src="@Href("~/Content/" +reviews.PathImage)" /></a> 
-                                    }
-                                    
-                                    @foreach (var reviews in Model.ProfileViewModel.LReviews)
-                                    { 
-                                        <p class="moviedes">Comentario:@reviews.Comment</p>
-                                        <p class="moviedes">Fecha:@reviews.Date</p>
-                                        <p class="moviedes">Rank:@reviews.Rank</p>
+=======
+                                     @if (Model.ProfileViewModel.LMovie== null)
+                                     {
+                                        
+                                     }
+                                     else
+                                     {
+                                         foreach (var reviews in Model.ProfileViewModel.LMovie)
+                                         { 
+                                             <p class="moviedes">Titulo:@reviews.Title</p>
                                       
+                                         }
+                                     }
+                                        
+                                    @if (Model.ProfileViewModel.LPoster == null)
+                                    {
+                                       
+>>>>>>> 0744d89e7c2f8535c869bd58f00ab58e131fafbf
+                                    }
+                                    else
+                                    {
+                                        foreach (var reviews in Model.ProfileViewModel.LPoster)
+                                        {
+                                            <a><img style="width: 200px; height: 300px;" src="@Href("~/Content/" + reviews.PathImage)" /></a>
+                                        }
+                                    }
+
+                                    @if (Model.ProfileViewModel.LReviews == null)
+                                    {
+                                        <p class="moviedes">No Tienes Reviews!</p>
+                                    }
+                                    else
+                                    {
+                                        foreach (var reviews in Model.ProfileViewModel.LReviews)
+                                        { 
+                                            <p class="moviedes">Comentario:@reviews.Comment</p>
+                                            <p class="moviedes">Fecha:@reviews.Date</p>
+                                            <p class="moviedes">Rank:@reviews.Rank</p>
+                                      
+                                        }
                                     }
                                     
+<<<<<<< HEAD
+=======
+                                    
+                                     
+
+>>>>>>> 0744d89e7c2f8535c869bd58f00ab58e131fafbf
                                    
                                        
                                 </div>
