@@ -97,7 +97,8 @@
                 </div>
 
 
-
+              
+                
                 <div class="panel panel-default" style="background-color:white;">
                     <div class="panel-body">
 
@@ -107,8 +108,8 @@
                                 @foreach (var poster in Model.LGetLastReviews)
                                 {
                                     <div>
-                                        
-                                        <a href="@Url.Action("Review","Review", new {id = poster.Id})" >
+                                    
+                                        <a href="@Url.Action("Review", "Review", new { id = poster.Id })" >
                                             <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/" + @poster.Path)" alt="Image">
                                         </a>
                                         <div class="subtitulo">
@@ -116,7 +117,7 @@
                                             @poster.Date
                                         </div>
                                     </div>
-                                }
+                                    }
 
                             </section>
 
@@ -124,7 +125,7 @@
 
                     </div>
                 </div>
-
+             
                 <div class="panel panel-default" style="background-color:#8b3337;">
                     <div class="panel-body">
                         <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Más populares</h2>

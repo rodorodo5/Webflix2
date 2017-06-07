@@ -33,9 +33,24 @@ namespace flix.Controllers
                 if (UserBL.CheckUserLogin(UserL)>0)
                 {
                     message = "Success";
+                    int id = UserBL.CheckUserLogin(UserL);
+                    var userData = new UserDBHelper();
+                    var usr = userData.GetById(id);
 
 
-        
+                    if (usr != null)
+                    {
+                        foreach (var item in usr)
+                        {
+                            Session["UserID"] = item.Id;
+                            Session["username"] = item.Username;
+                            Session["FirstName"] = item.Name;
+
+
+                        }
+
+                    }
+
                 }
                 else
                 {
@@ -49,31 +64,19 @@ namespace flix.Controllers
             if (Request.IsAjaxRequest())
             {
                 return Json(message, JsonRequestBehavior.AllowGet);
+                
             }
             else
             {
                 return RedirectToAction("Index", "Home");
             }
-        }
+
+           
 
         //!!!!!!!!!!!!!  Tiene que ser con algo como esto pero me truena.
-       //int id = UserBL.CheckUserLogin(UserL);
-       //             var userData = new UserDBHelper();
-       //             var usr = userData.GetById(id);
+       
 
-
-       //             if (usr != null)
-       //             {
-       //                 foreach (var item in usr)
-       //                 {
-       //                     Session["UserID"] = item.Id;
-       //                     Session["username"] = item.Username;
-       //                     Session["FirstName"] = item.Name;
-
-
-       //                 }
-
-       //             }
+}
 
 
 

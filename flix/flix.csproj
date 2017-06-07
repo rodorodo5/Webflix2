@@ -224,10 +224,12 @@
     <Compile Include="Models\GetLastReviews.cs" />
     <Compile Include="Models\GetTopUserReviewers.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\MongoMovieDbHelper.cs" />
     <Compile Include="Models\Mongo\MongoGenre.cs" />
     <Compile Include="Models\Mongo\MongoMovieDbHelper.cs" />
     <Compile Include="Models\Mongo\MongoMovie.cs" />
     <Compile Include="Models\Mongo\MongoReview.cs" />
+    <Compile Include="Models\Mongo\RandomMovieViewModel.cs" />
     <Compile Include="Models\MostPopularMovie.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MovieDBHelper.cs" />

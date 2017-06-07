@@ -15,7 +15,7 @@ namespace flix.Controllers
     {
 
 
-        public ActionResult Review(int id)
+        public ActionResult Review(int id,string name)
         {
             var movieActorDbHelper = new MovieActorDbHelper();
             var moviegenreDbHelper = new MovieGenreDBHelper();
