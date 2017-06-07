@@ -11,7 +11,6 @@ namespace flix.Controllers
 {
     public class HomeController : Controller
     {
-
         public ActionResult Index()
         {
             var viewModel = new HomeViewModel()
@@ -22,30 +21,19 @@ namespace flix.Controllers
                 LMostPopularMovies = ConnectionDb.GetRankMovie(10),
                 LActors = ConnectionDb.GetActors(),
                 LGenres = ConnectionDb.GetGenres()
-               
             };
             return View(viewModel);
         }
 
-<<<<<<< HEAD
-        //public ActionResult UserL()
-        //{
-        //    var viewModel = new UserL();
-        //    return View(viewModel);
-        //}
-
-
-=======
         [HttpPost]
-        public JsonResult Home(string Prefix)
+        public JsonResult Home(string Prefix,string value)
         {
-            var y = new MongoMovieDbHelper();
-            List<MongoMovie> searchBars = new List<MongoMovie>();
-            searchBars = y.nose(Prefix);
+           
+            var dataMongo = new MongoMovieDbHelper();
+            var searchBars = dataMongo.SearchMovieName(Prefix, value);
             //var x = (from N in searchBars where N.Title.StartsWith(search) select new {N.Title});
             return Json(searchBars, JsonRequestBehavior.AllowGet);
         }
->>>>>>> 0762f3d65594c5d05988379ccb37fb08d835a7f7
        
     }
 }

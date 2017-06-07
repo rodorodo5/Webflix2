@@ -31,12 +31,8 @@ namespace flix.Models
         public GetTopUserReviewers GetTopUserReviewers { get; set; }
         public IEnumerable<GetTopUserReviewers> LGetTopUserReviewerses { get; set; }
 
-<<<<<<< HEAD
-
-=======
         
         
->>>>>>> 0762f3d65594c5d05988379ccb37fb08d835a7f7
     }
 
 }

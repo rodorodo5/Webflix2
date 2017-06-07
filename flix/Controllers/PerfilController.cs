@@ -12,13 +12,14 @@ namespace flix.Controllers
         // GET: Perfil
         public ActionResult Perfil(long id)
         {
-            var data = new UserDBHelper();
+            var dataUser = new UserDBHelper();
+
             var viewModel = new UserViewMovel()
             {
-                LUser = data.GetById(id)
+                LUser = dataUser.GetById(id),
+                ProfileViewModel = dataUser.GetUserProfileById(id)
             };
-            
-            
+
             return View(viewModel);
         }
     }

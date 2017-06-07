@@ -7,7 +7,7 @@ namespace flix.Models
 {
     public class UserViewMovel
     {
-        public User User { get; set; }
-        public List<User> LUser { get; set; }
+       public List<User> LUser { get; set; }
+        public ProfileViewModel ProfileViewModel { get; set; }
     }
 }
