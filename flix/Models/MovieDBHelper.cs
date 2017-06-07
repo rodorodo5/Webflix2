@@ -255,5 +255,38 @@ namespace flix.Models
 
             return movies;
         }
+        public List<Movie> GetByGenre(string name, int top)
+        {
+            List<Movie> LMovie = new List<Movie>();
+
+            SqlCommand cmd = new SqlCommand("Movie_GetByGenre", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.Parameters.AddWithValue("@Top", top);
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(cmd);
+            DataTable dTable = new DataTable();
+
+            connection.Open();
+            dataAdapt.Fill(dTable);
+            connection.Close();
+
+            foreach (DataRow dRow in dTable.Rows)
+            {
+                var movie = new Movie
+                {
+                    Id = Convert.ToInt64(dRow["Id"]),
+                    Title = Convert.ToString(dRow["Title"]),
+                    Year = Convert.ToInt16(dRow["Year"]),
+                    Length = Convert.ToInt16(dRow["Length"]),
+                    Sinopsis = Convert.ToString(dRow["Sinopsis"]),
+                    Description = Convert.ToString(dRow["Description"]),
+                  
+                };
+
+                LMovie.Add(movie);
+            }
+
+            return LMovie;
+        }
     }
 }

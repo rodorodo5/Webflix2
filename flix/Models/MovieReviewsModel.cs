@@ -16,5 +16,6 @@ namespace flix.Models
         public List<Poster> Posters { get; set; }
         public List<Trailer> Trailers { get; set; }
        
+     
     }
 }

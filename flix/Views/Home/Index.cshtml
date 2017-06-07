@@ -7,10 +7,9 @@
 }
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="~/Resources/Libraries/slick-1.6.0/slick/slick.min.js"></script>
 <script src="~/Resources/Libraries/slick-1.6.0/slick/slick.js"></script>
-
 
 <script type="text/javascript">
 
@@ -54,11 +53,14 @@
     margin-left: auto;">
 
         <form class="search_bar larger">
-            @Html.DropDownList("Opciones",new List<SelectListItem>
+            <div class="search_dropdown">
+                @Html.DropDownList("Opciones", new List<SelectListItem>
             {
                 new SelectListItem {Text="Pelicula", Value = "1"},
                 new SelectListItem {Text = "Genero", Value = "2"}
-            },FormMethod.Post)
+            }, FormMethod.Post)
+            </div>
+        
             <button type="submit" value="Search">Search</button>
             <div class="form-horizontal">
 
@@ -95,7 +97,8 @@
                 </div>
 
 
-
+              
+                
                 <div class="panel panel-default" style="background-color:white;">
                     <div class="panel-body">
 
@@ -105,8 +108,8 @@
                                 @foreach (var poster in Model.LGetLastReviews)
                                 {
                                     <div>
-                                        
-                                        <a href="@Url.Action("Review","Review", new {id = poster.Id})" >
+                                    
+                                        <a href="@Url.Action("Review", "Review", new { id = poster.Id })" >
                                             <img class="hvr-shrink" style="width: 200px; height: 300px;" src="@Href("~/Content/" + @poster.Path)" alt="Image">
                                         </a>
                                         <div class="subtitulo">
@@ -114,7 +117,7 @@
                                             @poster.Date
                                         </div>
                                     </div>
-                                }
+                                    }
 
                             </section>
 
@@ -122,7 +125,7 @@
 
                     </div>
                 </div>
-
+             
                 <div class="panel panel-default" style="background-color:#8b3337;">
                     <div class="panel-body">
                         <h2 style="color:white;font-size:35px;text-align:center;" class="titles">Más populares</h2>

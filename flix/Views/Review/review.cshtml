@@ -4,8 +4,44 @@
 @{
     ViewBag.Title = "Review";
 }
+<head>
 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Reviews Online</title>
+    <link rel="stylesheet" type="text/css" href="~/Resources/Libraries/slick-1.6.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="~/Resources/Libraries/slick-1.6.0/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="~/Resources/Libraries/slick-1.6.0/slick/slick.min.js"></script>
+    <script src="~/Resources/Libraries/slick-1.6.0/slick/slick.js"></script>
+</head>
 <body class="body-content" style="background-color:#2e313f;">
+
+
+    <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".regular").slick({
+
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 3
+      });
+      $(".center").slick({
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autplay: true
+      });
+      $(".variable").slick({
+        dots: true,
+        infinite: true,
+        variableWidth: true
+      });
+    });
+    </script>
+
 
     <div class="body-content" style="padding-top: 20px;margin-left: 20px;margin-right: 20px;">
 
@@ -24,18 +60,22 @@
                     <div class="panel panel-default" style="background-color:white;">
                         <div class="panel-body">
 
-                            <div class="container" style="margin-left:100px;">
+                            <div class="container" style="margin-left:0px;">
                                 <div class="row">
                               
-                                    <div style="height: 700px;" class="col-md-3">
-                                        @foreach (var poster in Model.Posters)
+                                    <div style="height: 850px;" class="col-md-5">
+                                  
+                                <div class="center slider" style="width:76%;">
+                                        @foreach (var p in Model.Posters)
                                         {
-                                            <a><img style="width: 265px; height: 391px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="@Href("~/Content/" + @poster.PathImage)"/></a>
-                                    
+                                        <a><img style="width: 265px; height: 400px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                                            src="@Href("~/Content/" + @p.PathImage)" /></a>
                                         }
+                                   </div>
+                         
                                     </div>
-                                    <div style="height:700px; background-color:#8b3337;border-radius:15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
-                                          class="col-md-5">
+                                    <div style="height:850px; background-color:#8b3337;border-radius:15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                                          class="col-md-4">
                                             <div class="body-content" style="margin-top:30px;">
                                                 <h2 id="Title"></h2>
                                              
@@ -197,6 +237,7 @@
                 <div class="col-md-3" style="height:1000px; background-color:#8b3337;border-radius:15px;">
                     <div class="panel panel-default" style="margin-top:30px;text-align:center; font-size:17px;">
                         <div class="panel-body">Otras peliculas</div>
+                       
                     </div>
                 </div>
           

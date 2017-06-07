@@ -12,7 +12,7 @@ using MongoDB.Driver;
 
 namespace flix.Models
 {
-    public class MongoMovieDbHelper
+    public partial class MongoMovieDbHelper
     {
         private readonly MongoClient _client = new MongoClient("mongodb://localhost:27017");
      
@@ -26,13 +26,13 @@ namespace flix.Models
                 if (option == "Pelicula")
                 {
                     var colection = db.GetCollection<MongoMovie>("Movie");
-                    var filter =Builders<MongoMovie>.Filter.Regex("Title", new BsonRegularExpression("/^" + value + "/"));
+                    var filter =Builders<MongoMovie>.Filter.Regex("Title", new BsonRegularExpression("/^" + value + "/i"));
                     movies = colection.Find(filter).Limit(10).ToList();
                 }
                 else
                 {
                     var colection = db.GetCollection<MongoMovie>("Genre");
-                    var filter = Builders<MongoMovie>.Filter.Regex("Name", new BsonRegularExpression("/^" + value + "/"));
+                    var filter = Builders<MongoMovie>.Filter.Regex("Name", new BsonRegularExpression("/^" + value + "/i"));
                     movies = colection.Find(filter).Limit(10).ToList();
                 }
            

@@ -192,6 +192,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PerfilController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\UserLController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -223,10 +224,12 @@
     <Compile Include="Models\GetLastReviews.cs" />
     <Compile Include="Models\GetTopUserReviewers.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\MongoMovieDbHelper.cs" />
     <Compile Include="Models\Mongo\MongoGenre.cs" />
     <Compile Include="Models\Mongo\MongoMovieDbHelper.cs" />
     <Compile Include="Models\Mongo\MongoMovie.cs" />
     <Compile Include="Models\Mongo\MongoReview.cs" />
+    <Compile Include="Models\Mongo\RandomMovieViewModel.cs" />
     <Compile Include="Models\MostPopularMovie.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MovieDBHelper.cs" />
@@ -243,6 +246,7 @@
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\ReviewDBHelper.cs" />
     <Compile Include="Models\ReviewList.cs" />
+    <Compile Include="Models\UserL.cs" />
     <Compile Include="Models\UserViewMovel.cs" />
     <Compile Include="Models\SearchBar.cs" />
     <Compile Include="Models\Trailer.cs" />
@@ -576,7 +580,11 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Login\logout.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Admin\Admin.cshtml" />
+=======
+    <Content Include="Views\UserL\UserL.cshtml" />
+>>>>>>> 9c003622f2d04b6241be47cc884d0ddf2643e54b
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
