@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="1cc6f3a6642b42bab040d43f581ea459" Name="Diagram1">
-        <EntityTypeShape EntityType="GoodMovieModel.User" Width="2" PointX="0.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GoodMovieModel.User" Width="2" PointX="2.375" PointY="1" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
