@@ -4,7 +4,7 @@
     ViewBag.Title = "UserL";
 }
 
-<body>
+<body style="background-color:#2e313f">
 
 
 
@@ -71,7 +71,7 @@
                 success: function (result) {
                     if (result.toString() == "Success") {
                         $("#myModal").modal('hide');
-
+                            window.location.href = "/Home/Index";
                     }
                     else {
                         $("#UserName").val("");

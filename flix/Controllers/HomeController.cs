@@ -9,8 +9,9 @@ using MongoDB.Bson;
 
 namespace flix.Controllers
 {
-    public class HomeController : Controller
-    {
+    public class HomeController : Controller { 
+    
+       
         public ActionResult Index()
         {
             var viewModel = new HomeViewModel()

@@ -10,7 +10,11 @@ namespace flix.Controllers
     public class PerfilController : Controller
     {
         // GET: Perfil
+<<<<<<< HEAD
+        [HandleError]
+=======
        
+>>>>>>> 0744d89e7c2f8535c869bd58f00ab58e131fafbf
         public ActionResult Perfil(long id)
         {
             var dataUser = new UserDBHelper();

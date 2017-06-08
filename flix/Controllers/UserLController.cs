@@ -15,6 +15,11 @@ namespace flix.Controllers
         public ActionResult UserL()
         {
 
+
+            if (Session["Username"] != null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 
@@ -63,7 +68,9 @@ namespace flix.Controllers
             }
             if (Request.IsAjaxRequest())
             {
-                return Json(message, JsonRequestBehavior.AllowGet);
+               return Json(message, JsonRequestBehavior.AllowGet);
+            
+                
                 
             }
             else
@@ -73,7 +80,7 @@ namespace flix.Controllers
 
            
 
-        //!!!!!!!!!!!!!  Tiene que ser con algo como esto pero me truena.
+        
        
 
 }

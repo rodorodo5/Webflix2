@@ -4,7 +4,13 @@
 @{
     ViewBag.Title = "perfil";
 }
-
+<head>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="~/Resources/Libraries/slick-1.6.0/slick/slick.min.js"></script>
+    <script src="~/Resources/Libraries/slick-1.6.0/slick/slick.js"></script>
+</head>
 
 <body class="body-content" style="background-color:#2e313f;">
 
@@ -61,6 +67,13 @@
                             
                             <div style="height:450px; background-color:#8b3337;border-radius:15px;" class="col-md-5">
                                 <div class="body-content" style="margin-top:30px;">
+<<<<<<< HEAD
+                                     
+                                    @foreach (var reviews in Model.ProfileViewModel.LMovie)
+                                    { 
+                                        <p class="moviedes">Titulo:@reviews.Title</p>
+                                     
+=======
                                      @if (Model.ProfileViewModel.LMovie== null)
                                      {
                                         
@@ -77,6 +90,7 @@
                                     @if (Model.ProfileViewModel.LPoster == null)
                                     {
                                        
+>>>>>>> 0744d89e7c2f8535c869bd58f00ab58e131fafbf
                                     }
                                     else
                                     {
@@ -101,9 +115,12 @@
                                         }
                                     }
                                     
+<<<<<<< HEAD
+=======
                                     
                                      
 
+>>>>>>> 0744d89e7c2f8535c869bd58f00ab58e131fafbf
                                    
                                        
                                 </div>

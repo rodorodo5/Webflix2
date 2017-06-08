@@ -9,6 +9,7 @@ namespace flix.Controllers
 {
     public class AdminController : Controller
     {
+        [HandleError]
         // GET: Admin
         public ActionResult Admin()
         {
