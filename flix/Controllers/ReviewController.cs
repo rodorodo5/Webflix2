@@ -14,7 +14,7 @@ namespace flix.Controllers
     public class ReviewController : Controller
     {
 
-
+        [HandleError]
         public ActionResult Review(int id,string name)
         {
             var movieActorDbHelper = new MovieActorDbHelper();
