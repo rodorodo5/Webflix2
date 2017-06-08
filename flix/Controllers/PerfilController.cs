@@ -10,17 +10,20 @@ namespace flix.Controllers
     public class PerfilController : Controller
     {
         // GET: Perfil
+       
         public ActionResult Perfil(long id)
         {
             var dataUser = new UserDBHelper();
-
-            var viewModel = new UserViewMovel()
+            if (dataUser.UserExist(id) >= 1)
             {
-                LUser = dataUser.GetById(id),
-                ProfileViewModel = dataUser.GetUserProfileById(id)
-            };
-
-            return View(viewModel);
+                 var viewModel = new UserViewMovel()
+                {
+                    LUser = dataUser.GetById(id),
+                    ProfileViewModel = dataUser.GetUserProfileById(id)
+                };
+                return View(viewModel);
+            }
+            return View();
         }
     }
 }

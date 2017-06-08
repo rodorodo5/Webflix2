@@ -99,7 +99,7 @@
                         @if (Session["username"] != null)
                         {
 
-                              <li style="font-weight:bold;">@Html.ActionLink( "Hi "+ @Session["username"].ToString(), "perfil", "Perfil")</li>
+                              <li style="font-weight:bold;">@Html.ActionLink( "Hi "+ @Session["username"].ToString(), "Perfil", "Perfil", new { Id = Session["UserID"] }, null)</li>
                             <li style="font-weight:bold;">@Html.ActionLink("Logout", "logout", "Login")</li>
                             
                         }
